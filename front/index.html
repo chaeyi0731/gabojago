@@ -14,12 +14,36 @@
         width: 100vw;
         height: 100vh;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
       #map {
         width: 70vw;
         height: 70vh;
+      }
+      h1 {
+        color: white;
+      }
+      p {
+        color: white;
+      }
+      .overlay-content {
+        background-color: #fff;
+        border: 2px solid #ccc;
+        padding: 10px;
+        max-width: 300px;
+      }
+
+      /* 맛집 목록 스타일 */
+      .restaurant-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .restaurant-list li {
+        margin: 5px 0;
+        color: white;
       }
     </style>
     <script
@@ -29,6 +53,9 @@
   </head>
   <body>
     <div id="root">
+      <h1>어디든 가보자고~!</h1>
+      <p>(나름의) 맛집과 (나름의) 관광지 정리!</p>
+      <p>제작자가 아싸라서 맛 없고 재미 없을 수도 있음</p>
       <div id="map"></div>
       <script src="index.js"></script>
     </div>
