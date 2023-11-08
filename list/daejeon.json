@@ -13,57 +13,73 @@
         "name": "요우란",
         "address": "대전 중구 선화서로 34 한국빌딩 1층",
         "description": "대전 중구 선화동 일본식 감성 데이트하기 좋은 텐동 맛집",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190710_205%2F1562735173606WPERe_JPEG%2FMD35zgRNXDYZTj0hBL44PjZu.jpg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190710_205%2F1562735173606WPERe_JPEG%2FMD35zgRNXDYZTj0hBL44PjZu.jpg",
+        "latitude": 36.3268968,
+        "longitude": 127.4188217
       },
       {
         "name": "한영식당",
         "address": "대전 중구 계룡로874번길 6",
         "description": "삼대천왕 닭도리탕 닭볶음탕 볶음밥까지 맛있었던 곳",
-        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA5MjVfMzUg%2FMDAxNjY0MDg5MDkyNDI5.c_aCcIVzAk-GVkeh4a9Zjs_2PrbPR0fNuk-ZI125sAwg.2YOocbryq_q_ai_pCD4e8wM5Xd8S5rmYHpp0p070JTog.JPEG.loveporori111%2FKakaoTalk_20220925_145132759_03.jpg"
+        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA5MjVfMzUg%2FMDAxNjY0MDg5MDkyNDI5.c_aCcIVzAk-GVkeh4a9Zjs_2PrbPR0fNuk-ZI125sAwg.2YOocbryq_q_ai_pCD4e8wM5Xd8S5rmYHpp0p070JTog.JPEG.loveporori111%2FKakaoTalk_20220925_145132759_03.jpg",
+        "latitude": 36.3234206,
+        "longitude": 127.4107681
       },
       {
         "name": "우리의오늘",
         "address": "대전 중구 오류로74번길 40",
         "description": "일본식 코타츠가 있고 일본풍의 분위기가 물씬 풍기는 곳",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230112_113%2F1673496700205oeRdI_JPEG%2FScreenshot_20230112_130645_Gallery.jpg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230112_113%2F1673496700205oeRdI_JPEG%2FScreenshot_20230112_130645_Gallery.jpg",
+        "latitude": 36.3272634,
+        "longitude": 127.4052244
       },
       {
         "name": "성심당",
         "address": "대전 중구 대종로480번길 15",
         "description": "대전 하면 성심당! 대전의 랜드마크 성심당 본점",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220728_286%2F1658996686205cRrN7_PNG%2F%25B3%25D7%25C0%25CC%25B9%25F6%25BA%25BB%25C1%25A1_1_%25BB%25E7%25C0%25CC%25C1%25EE%25C1%25B6%25C1%25A4.png"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220728_286%2F1658996686205cRrN7_PNG%2F%25B3%25D7%25C0%25CC%25B9%25F6%25BA%25BB%25C1%25A1_1_%25BB%25E7%25C0%25CC%25C1%25EE%25C1%25B6%25C1%25A4.png",
+        "latitude": 36.3277298,
+        "longitude": 127.4273109
       },
       {
         "name": "오월드",
         "address": "대전 중구 사정공원로 70",
         "description": "대전의 유일한 테마파크, 다양한 동물과 놀이기구가 있는 곳",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210409_107%2F1617931466585DfABI_JPEG%2F%25BD%25C3%25BC%25B3%25B9%25B0%25C0%25CC%25B9%25CC%25C1%25F61.jpg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210409_107%2F1617931466585DfABI_JPEG%2F%25BD%25C3%25BC%25B3%25B9%25B0%25C0%25CC%25B9%25CC%25C1%25F61.jpg",
+        "latitude": 36.2888608,
+        "longitude": 127.397939
       },
       {
         "name": "은행동",
         "address": "대전광역시 중구 은행동",
         "description": "패션의 거리, 대전의 원도심!",
-        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDVfODgg%2FMDAxNjkzODc0OTc4NjQ4.wTng5sisGX8F6Mk88hul0VnNoqDktrlhs-L-ek0oUSkg.0xLaBsKzWz-dcsPyfdxqivddABvswQb4YjzBKksoiKcg.JPEG.pliokuj633%2FIMG_4547.JPG"
+        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDVfODgg%2FMDAxNjkzODc0OTc4NjQ4.wTng5sisGX8F6Mk88hul0VnNoqDktrlhs-L-ek0oUSkg.0xLaBsKzWz-dcsPyfdxqivddABvswQb4YjzBKksoiKcg.JPEG.pliokuj633%2FIMG_4547.JPG",
+        "latitude": 36.3290864,
+        "longitude": 127.4273184
       },
       {
         "name": "책과향기",
         "address": "대전 중구 중앙로 145 중앙로 지하상가 c다11",
         "description": "나만의 향수를 만들 수 있는 곳 연인과 가기 좋은 곳",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200101_239%2F1577855312881GE6Bu_JPEG%2Fi5OLuzx-eOfEIwusKqGoULdP.jpg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200101_239%2F1577855312881GE6Bu_JPEG%2Fi5OLuzx-eOfEIwusKqGoULdP.jpg",
+        "latitude": 36.3280399,
+        "longitude": 127.4241371
       },
       {
         "name": "대전 고봉민 김밥",
         "address": "대전 중구 충무로107번길 100 자이아파트 상가 105호",
         "description": "다른 체인점과 다르게 돈가스김밥이 특별하게 맛있는 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230502_110%2F1682990554239TUmxL_PNG%2F%25C4%25C1%25BC%25C1%25B7%25CE%25B0%25ED%25BA%25AF%25B0%25E6-1000x1500.png",
-        "latitude": 36.3503409,
-        "longitude": 127.3848208
+        "latitude": 36.3222413,
+        "longitude": 127.42775
       },
       {
         "name": "대전 아쿠아리움",
         "address": "대전 중구 보문산공원로 469",
         "description": "다양한 동물들을 만나 볼  수 있고 보는 것 뿐만아니라 직접 만져 볼 수  있는 체험도 가능 한 곳",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210915_36%2F1631679015447KYpjO_JPEG%2Fbanner_x_%25282%2529.jpg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210915_36%2F1631679015447KYpjO_JPEG%2Fbanner_x_%25282%2529.jpg",
+        "latitude": 36.3100835,
+        "longitude": 127.4210676
       }
     ]
   },
@@ -74,38 +90,48 @@
         "address": "대전 유성구 신성로84번길 63 신성동왕족발",
         "description": "제작자가 먹어본 족발 중에 제일 맛있다 불족발은 필수로 먹어줘야 하는 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210518_80%2F16212636345155mIcU_JPEG%2F7JI2qU3sIzYjnm66FeGulVB0.jpg",
-        "latitude": 36.3503409,
-        "longitude": 127.3848208
+        "latitude": 36.3884846,
+        "longitude": 127.3516274
       },
       {
         "name": "달자네 뒷고기",
         "address": "대전 유성구 진잠로78번길 49",
         "description": "덜미살이 맛있는 곳",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191116_147%2F1573910146754RNmdu_JPEG%2FkAJwT7tAj677Y6JDZ98L-Tpe.jpg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191116_147%2F1573910146754RNmdu_JPEG%2FkAJwT7tAj677Y6JDZ98L-Tpe.jpg",
+        "latitude": 36.2993083,
+        "longitude": 127.3187632
       },
       {
         "name": "착한곱창",
         "address": "대전 유성구 상대동로36번길 31",
         "description": "곱이 가득 들어 고소한 곱창을 먹고 싶다면 착한 곱창으로...",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzAyMjVfNiAg%2FMDAxNjc3MzA0ODAxODM3.C_IhFIvKKKf_lzffjNcHn0w6oHGOLB0YgbMvvWxq_uIg.Yw2buWyw4NmkbDFrWgNCr1k6tOpRbaADA01O_LX6WAIg.JPEG%2F95549C2B-FC71-4103-98FF-DC0A033B3DF8.jpeg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzAyMjVfNiAg%2FMDAxNjc3MzA0ODAxODM3.C_IhFIvKKKf_lzffjNcHn0w6oHGOLB0YgbMvvWxq_uIg.Yw2buWyw4NmkbDFrWgNCr1k6tOpRbaADA01O_LX6WAIg.JPEG%2F95549C2B-FC71-4103-98FF-DC0A033B3DF8.jpeg",
+        "latitude": 36.3469218,
+        "longitude": 127.3397479
       },
       {
         "name": "청해바지락칼국수",
         "address": "대전 유성구 상대동로2번길 67-13 . 102,103호",
         "description": "해감이 잘 되어있고 뽀얗고 시원한 칼국수",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200318_165%2F1584506586005LEJF3_JPEG%2FMgUU3zeE0lCV0apwHcHd2l4c.jpg"
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200318_165%2F1584506586005LEJF3_JPEG%2FMgUU3zeE0lCV0apwHcHd2l4c.jpg",
+        "latitude": 36.3445651,
+        "longitude": 127.3393801
       },
       {
         "name": "늘상상",
         "address": "대전 유성구 봉명서로 21-1 1층 늘상상",
         "description": "유린기가 맛있는 감성있는 중식당",
-        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTNfMzkg%2FMDAxNjk3MjA3OTE3OTQ0.qpBmmikKQNGQKhvgz_R2jWyG8BA4Su1oXQSPgWJm0aIg.QX9Bg47IF7Ezk32Bk8yiFnItnMJJS9gxOtY7WdjYyokg.JPEG.sfs2612%2FKakaoTalk_20231013_225025767_06.jpg"
+        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTNfMzkg%2FMDAxNjk3MjA3OTE3OTQ0.qpBmmikKQNGQKhvgz_R2jWyG8BA4Su1oXQSPgWJm0aIg.QX9Bg47IF7Ezk32Bk8yiFnItnMJJS9gxOtY7WdjYyokg.JPEG.sfs2612%2FKakaoTalk_20231013_225025767_06.jpg",
+        "latitude": 36.344337,
+        "longitude": 127.341549
       },
       {
         "name": "유성온천 족욕체험장",
-        "address": "대전 유성구 봉명동",
+        "address": "대전광역시 유성구 봉명동 574-4",
         "description": "깨끗하고 힐링이 가득하고 산책하기가 좋은 곳",
-        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDFfMTkz%2FMDAxNjkzNTY2NDkzNjgz.BMdvEGbWAUROZFHfIn15XsCH9BjY4OnVcaioh1OmS8Yg.S3uHuQti9B1386cjBnD8auU5ShaHRndgrOOVudShpVQg.JPEG.neonadeuli72%2F%25C0%25AF%25BC%25BA%25BF%25C2%25C3%25B5%25B9%25AE%25C8%25AD%25B0%25F8%25BF%25F8_%252815%2529.JPG"
+        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDFfMTkz%2FMDAxNjkzNTY2NDkzNjgz.BMdvEGbWAUROZFHfIn15XsCH9BjY4OnVcaioh1OmS8Yg.S3uHuQti9B1386cjBnD8auU5ShaHRndgrOOVudShpVQg.JPEG.neonadeuli72%2F%25C0%25AF%25BC%25BA%25BF%25C2%25C3%25B5%25B9%25AE%25C8%25AD%25B0%25F8%25BF%25F8_%252815%2529.JPG",
+        "latitude": 36.3551488,
+        "longitude": 127.3446279
       }
     ]
   },
@@ -116,8 +142,8 @@
         "address": "대전 서구 원도안로207번길 16-61 1층",
         "description": "분위기가 좋고 테라스가 있으며 한옥풍경 밤에는 조명까지 있어 힐링이 가능한 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_101%2F1693910392599DRxE7_JPEG%2FKakaoTalk_20230905_193740326_23.jpg",
-        "latitude": 36.3503409,
-        "longitude": 127.3848208
+        "latitude": 36.3227914,
+        "longitude": 127.3436967
       }
     ]
   }
