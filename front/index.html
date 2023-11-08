@@ -19,7 +19,7 @@
         align-items: center;
       }
       #map {
-        width: 70vw;
+        width: 60vw;
         height: 70vh;
       }
       h1 {
@@ -49,13 +49,17 @@
         width: 90vw;
         height: 80vh;
         display: flex;
-        flex-direction: row;
       }
       #btn {
         width: 10vw;
         height: 10vh;
         margin: 10px;
         color: #fff;
+      }
+      .button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
       }
     </style>
     <script
@@ -70,7 +74,9 @@
       <p>제작자가 아싸라서 맛 없고 재미 없을 수도 있음</p>
       <div class="mapandbutton">
         <div id="map"></div>
-        <button id="btn">click해서 지역보기</button>
+        <div class="button">
+          <button id="btn">click해서 지역보기</button>
+        </div>
       </div>
       <script src="index.js"></script>
     </div>
