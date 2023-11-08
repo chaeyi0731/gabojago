@@ -146,5 +146,29 @@
         "longitude": 127.3436967
       }
     ]
+  },
+  "대전광역시/대덕구": {
+    "locations": [
+      {
+        "name": "델빠네",
+        "address": "대전 서구 원도안로207번길 16-61 1층",
+        "description": "분위기가 좋고 테라스가 있으며 한옥풍경 밤에는 조명까지 있어 힐링이 가능한 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_101%2F1693910392599DRxE7_JPEG%2FKakaoTalk_20230905_193740326_23.jpg",
+        "latitude": 36.3227914,
+        "longitude": 127.3436967
+      }
+    ]
+  },
+  "대전광역시/동구": {
+    "locations": [
+      {
+        "name": "델빠네",
+        "address": "대전 서구 원도안로207번길 16-61 1층",
+        "description": "분위기가 좋고 테라스가 있으며 한옥풍경 밤에는 조명까지 있어 힐링이 가능한 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_101%2F1693910392599DRxE7_JPEG%2FKakaoTalk_20230905_193740326_23.jpg",
+        "latitude": 36.3227914,
+        "longitude": 127.3436967
+      }
+    ]
   }
 }
