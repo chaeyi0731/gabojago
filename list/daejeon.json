@@ -152,6 +152,30 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230116_129%2F16738489934524KKcI_JPEG%2F4-1.jpg",
         "latitude": 36.3227914,
         "longitude": 127.3886392
+      },
+      {
+        "name": "도군함박",
+        "address": "대전 서구 둔산남로9번길 51 1층 도군함박",
+        "description": "조용하게 즐기는 함박스테이크",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160822_224%2F147179336495185I40_JPEG%2F176772405943113_14.jpeg",
+        "latitude": 36.3482147,
+        "longitude": 127.3785038
+      },
+      {
+        "name": "한밭수목원",
+        "address": "대전 서구 둔산대로 169",
+        "description": "피크닉 즐기기에 좋고 꽃도 보고 인라인도 타고 겨울엔 스케이트까지?!",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_163%2F1441007267046aSC1F_JPEG%2F11622659_1.jpg",
+        "latitude": 36.3688239,
+        "longitude": 127.3879822
+      },
+      {
+        "name": "샤브작",
+        "address": "대전 서구 둔산남로9번길 37 2층 샤브작",
+        "description": "혼자서도 즐길 수 있는 1인 샤브샤브",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231031_61%2F1698714303695EOXuQ_JPEG%2FIMG_3539.jpg",
+        "latitude": 36.3482147,
+        "longitude": 127.3785038
       }
     ]
   },
