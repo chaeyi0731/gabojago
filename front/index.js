@@ -49,27 +49,75 @@ guDiv.style.display = 'flex';
 guDiv.style.alignItems = 'center';
 guDiv.style.flexDirection = 'column';
 
+//* 대전시 중구 버튼 동적 생성
+let jungu = document.createElement('button');
+guDiv.appendChild(jungu);
+
+//* 대전시 서구 버튼 동적 생성
+let seogu = document.createElement('button');
+guDiv.appendChild(seogu);
+
+//* 대전시 동구 버튼 동적 생성
+let dongu = document.createElement('button');
+guDiv.appendChild(dongu);
+
+//* 대전시 대덕구 버튼 동적 생성
+let daedokgu = document.createElement('button');
+guDiv.appendChild(daedokgu);
+
+//* 대전시 유성구 버튼 동적 생성
+let yuseonggu = document.createElement('button');
+guDiv.appendChild(yuseonggu);
+
+//* 대전 버튼 클릭 시 나옴
 daejeonButton.addEventListener('click', () => {
-  let jungu = document.createElement('button');
-  guDiv.appendChild(jungu);
   jungu.textContent = '중구';
   jungu.style.color = 'white';
-  let seogu = document.createElement('button');
-  guDiv.appendChild(seogu);
   seogu.textContent = '서구';
   seogu.style.color = 'white';
-  let dongu = document.createElement('button');
-  guDiv.appendChild(dongu);
   dongu.textContent = '동구';
   dongu.style.color = 'white';
 
-  let daedokgu = document.createElement('button');
-  guDiv.appendChild(daedokgu);
   daedokgu.textContent = '대덕구';
   daedokgu.style.color = 'white';
 
-  let yuseonggu = document.createElement('button');
-  guDiv.appendChild(yuseonggu);
   yuseonggu.textContent = '유성구';
   yuseonggu.style.color = 'white';
 });
+
+fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가져옵니다.
+  .then((response) => {
+    return response.json(); // JSON 데이터로 변환합니다.
+  })
+  .then((data) => {
+    // * 구 버튼 클릭시 이벤트 리스너
+    jungu.addEventListener('click', () => {
+      // 해당 구의 맛집과 관광지 목록을 가져옵니다.
+      const junguData = data['대전광역시/중구'];
+
+      // 구 목록을 초기화합니다.
+      guDiv.innerHTML = '';
+
+      // 목록을 생성합니다.
+      const locationList = document.createElement('ul');
+      locationList.className = 'location-list';
+
+      junguData.locations.forEach((location) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = location.name;
+
+        // 클릭 이벤트를 추가하여 해당 장소로 지도 이동 가능하도록 합니다.
+        listItem.addEventListener('click', function () {
+          // 클릭한 장소로 지도 이동 또는 기타 작업 수행
+          alert(`이동: ${location.name}`);
+        });
+
+        locationList.appendChild(listItem);
+      });
+
+      guDiv.appendChild(locationList);
+    });
+  })
+  .catch((error) => {
+    console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
+  });
