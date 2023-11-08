@@ -4,55 +4,40 @@ var mapOptions = {
 };
 
 var map = new naver.maps.Map('map', mapOptions);
+const mapp = document.getElementsByClassName('button')[0];
+console.log(mapp);
 
-// 대전 구 경계 좌표 데이터
-var daejeonDistricts = {
-  '대전광역시/동구': [
-    new naver.maps.LatLng(36.32938, 127.44313), // 경계 좌표 1
-    // 다른 경계 좌표 추가
-  ],
-  '대전광역시/중구': [
-    new naver.maps.LatLng(36.28044, 127.41093), // 경계 좌표 1
-    // 다른 경계 좌표 추가
-  ],
-  '대전광역시/서구': [
-    new naver.maps.LatLng(36.28071, 127.34533), // 경계 좌표 1
-    // 다른 경계 좌표 추가
-  ],
-  '대전광역시/유성구': [
-    new naver.maps.LatLng(36.36685, 127.327), // 경계 좌표 1
-    // 다른 경계 좌표 추가
-  ],
-  '대전광역시/대덕구': [
-    new naver.maps.LatLng(36.39591, 127.43437), // 경계 좌표 1
-    // 다른 경계 좌표 추가
-  ],
-};
+// "btn" 버튼 엘리먼트를 가져옵니다.
+const btn = document.getElementById('btn');
 
-// 각 구에 대한 다각형을 그릴 배열
-var districtPolygons = [];
+// 버튼에 클릭 이벤트 리스너를 추가합니다.
+btn.addEventListener('click', function () {
+  // 클릭 이벤트가 발생했을 때 실행할 코드를 작성합니다.
 
-for (var district in daejeonDistricts) {
-  if (daejeonDistricts.hasOwnProperty(district)) {
-    var polygon = new naver.maps.Polygon({
-      paths: daejeonDistricts[district],
-      strokeColor: '#FF0000', // 다각형 테두리 색상
-      strokeOpacity: 0.8, // 테두리 투명도
-      strokeWeight: 2, // 테두리 두께
-      fillColor: '#FF0000', // 다각형 내부 색상
-      fillOpacity: 0.35, // 내부 색상 투명도
-      clickable: true,
-      map: map,
-    });
+  // "대전" 버튼 엘리먼트를 생성합니다.
+  var daejeonButton = document.createElement('button');
+  daejeonButton.textContent = '대전';
 
-    // 다각형에 클릭 이벤트 리스너 추가
-    (function (district) {
-      naver.maps.Event.addListener(polygon, 'click', function (e) {
-        // 클릭한 구에 대한 정보를 표시하거나 원하는 작업을 수행
-        alert('클릭한 구: ' + district);
-      });
-    })(district);
+  // "광주" 버튼 엘리먼트를 생성합니다.
+  var gwangjuButton = document.createElement('button');
+  gwangjuButton.textContent = '광주';
 
-    districtPolygons.push(polygon);
-  }
-}
+  // 버튼을 숨김 처리합니다.
+  daejeonButton.style.display = 'none';
+  gwangjuButton.style.display = 'none';
+
+  // 클릭 이벤트를 추가합니다.
+  document.getElementById('btn').addEventListener('click', function () {
+    // "대전"과 "광주" 버튼을 토글하여 보이게 하거나 숨깁니다.
+    if (daejeonButton.style.display === 'none') {
+      daejeonButton.style.display = 'block';
+      gwangjuButton.style.display = 'block';
+    } else {
+      daejeonButton.style.display = 'none';
+      gwangjuButton.style.display = 'none';
+    }
+  });
+
+  mapp.appendChild(daejeonButton);
+  mapp.appendChild(gwangjuButton);
+});
