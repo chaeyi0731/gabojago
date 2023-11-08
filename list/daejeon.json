@@ -182,24 +182,24 @@
   "대전광역시/대덕구": {
     "locations": [
       {
-        "name": "델빠네",
-        "address": "대전 서구 원도안로207번길 16-61 1층",
-        "description": "분위기가 좋고 테라스가 있으며 한옥풍경 밤에는 조명까지 있어 힐링이 가능한 곳",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_101%2F1693910392599DRxE7_JPEG%2FKakaoTalk_20230905_193740326_23.jpg",
-        "latitude": 36.3227914,
-        "longitude": 127.3436967
+        "name": "오문창 순대국밥",
+        "address": "대전시 대덕구 중리동 203-2",
+        "description": "대전 국밥 중 유명한 곳 뽑으라면 여기가 빠질 수 없음",
+        "image": "https://d12zq4w4guyljn.cloudfront.net/20230307073101083_photo_48c791ecc066.jpg",
+        "latitude": 36.3592645,
+        "longitude": 127.4265939
       }
     ]
   },
   "대전광역시/동구": {
     "locations": [
       {
-        "name": "델빠네",
-        "address": "대전 서구 원도안로207번길 16-61 1층",
-        "description": "분위기가 좋고 테라스가 있으며 한옥풍경 밤에는 조명까지 있어 힐링이 가능한 곳",
-        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_101%2F1693910392599DRxE7_JPEG%2FKakaoTalk_20230905_193740326_23.jpg",
-        "latitude": 36.3227914,
-        "longitude": 127.3436967
+        "name": "오씨칼국수",
+        "address": "대전 동구 옛신탄진로 13",
+        "description": "대전에서 유명한 칼국수 타지역에서 온다면 꼭 한번씩 들리는 그런 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200114_70%2F1579008854401Q0bIC_JPEG%2FZBSHIgTNAy4DZATvKa2iTEb1.jpg",
+        "latitude": 36.3420012,
+        "longitude": 127.4250555
       }
     ]
   }
