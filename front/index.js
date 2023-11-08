@@ -319,7 +319,7 @@ fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가�
         // 목록이 스크롤 가능하도록 스타일링 추가
         locationList.style.overflowY = 'auto';
         locationList.style.maxHeight = '600px';
-        locationList.style.width = '2vw';
+        locationList.style.width = '25vw';
       })
       .catch((error) => {
         console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
