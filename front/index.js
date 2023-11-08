@@ -12,10 +12,12 @@ const btn = document.getElementById('btn');
 // "대전" 버튼 엘리먼트를 생성합니다.
 const daejeonButton = document.createElement('button');
 daejeonButton.textContent = '대전';
+daejeonButton.style.color = 'white';
 
 // "광주" 버튼 엘리먼트를 생성합니다.
 const gwangjuButton = document.createElement('button');
 gwangjuButton.textContent = '광주';
+gwangjuButton.style.color = 'white';
 
 // 버튼에 클릭 이벤트 리스너를 추가합니다.
 btn.addEventListener('click', function () {
@@ -51,16 +53,23 @@ daejeonButton.addEventListener('click', () => {
   let jungu = document.createElement('button');
   guDiv.appendChild(jungu);
   jungu.textContent = '중구';
+  jungu.style.color = 'white';
   let seogu = document.createElement('button');
   guDiv.appendChild(seogu);
   seogu.textContent = '서구';
+  seogu.style.color = 'white';
   let dongu = document.createElement('button');
   guDiv.appendChild(dongu);
   dongu.textContent = '동구';
+  dongu.style.color = 'white';
+
   let daedokgu = document.createElement('button');
   guDiv.appendChild(daedokgu);
   daedokgu.textContent = '대덕구';
+  daedokgu.style.color = 'white';
+
   let yuseonggu = document.createElement('button');
   guDiv.appendChild(yuseonggu);
   yuseonggu.textContent = '유성구';
+  yuseonggu.style.color = 'white';
 });
