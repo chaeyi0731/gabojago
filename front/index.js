@@ -9,18 +9,17 @@ console.log(mapp);
 
 // "btn" 버튼 엘리먼트를 가져옵니다.
 const btn = document.getElementById('btn');
+// "대전" 버튼 엘리먼트를 생성합니다.
+var daejeonButton = document.createElement('button');
+daejeonButton.textContent = '대전';
+
+// "광주" 버튼 엘리먼트를 생성합니다.
+var gwangjuButton = document.createElement('button');
+gwangjuButton.textContent = '광주';
 
 // 버튼에 클릭 이벤트 리스너를 추가합니다.
 btn.addEventListener('click', function () {
   // 클릭 이벤트가 발생했을 때 실행할 코드를 작성합니다.
-
-  // "대전" 버튼 엘리먼트를 생성합니다.
-  var daejeonButton = document.createElement('button');
-  daejeonButton.textContent = '대전';
-
-  // "광주" 버튼 엘리먼트를 생성합니다.
-  var gwangjuButton = document.createElement('button');
-  gwangjuButton.textContent = '광주';
 
   // 버튼을 숨김 처리합니다.
   daejeonButton.style.display = 'none';
