@@ -1,8 +1,10 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const path = require('path');
 
 app.use(express.static('front')); // 'front'는 정적 파일이 있는 디렉토리 경로입니다
+const jsonFilePath = path.join(__dirname, 'list', 'daejeon.json');
 
 app.get('/', (req, res) => {
   fs.readFile('./front/index.html', (err, data) => {
@@ -13,6 +15,10 @@ app.get('/', (req, res) => {
       res.send(data);
     }
   });
+});
+
+app.get('/list/daejeon.json', (req, res) => {
+  res.sendFile(jsonFilePath);
 });
 
 const PORT = process.env.PORT || 8080;
