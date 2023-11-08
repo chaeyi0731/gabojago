@@ -6,8 +6,8 @@
         "address": "대전광역시 중구 중앙로137번길 64",
         "description": "일본 전통 생라멘을 맛볼수 있는곳 ! 최상급 재료의 안주거리도 있어 분위기있는 데이트 장소",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221011_74%2F1665468641055ErX4p_JPEG%2F1665468173154.jpg",
-        "latitude": 36.3503409,
-        "longitude": 127.3848208
+        "latitude": 36.3305629,
+        "longitude": 127.4227525
       },
       {
         "name": "요우란",
@@ -68,34 +68,56 @@
     ]
   },
   "대전광역시/유성구": {
-    "restaurants": [
+    "locations": [
       {
-        "name": "맛집 1",
-        "address": "주소 1",
-        "description": "",
-        "image": "",
+        "name": "신성동 왕족발",
+        "address": "대전 유성구 신성로84번길 63 신성동왕족발",
+        "description": "제작자가 먹어본 족발 중에 제일 맛있다 불족발은 필수로 먹어줘야 하는 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210518_80%2F16212636345155mIcU_JPEG%2F7JI2qU3sIzYjnm66FeGulVB0.jpg",
         "latitude": 36.3503409,
         "longitude": 127.3848208
       },
       {
-        "name": "맛집 2",
-        "address": "주소 2",
-        "description": "맛집 2 설명",
-        "image": "맛집 2 이미지 URL"
-      }
-    ],
-    "touristAttractions": [
-      {
-        "name": "관광지 1",
-        "address": "주소 1",
-        "description": "관광지 1 설명",
-        "image": "관광지 1 이미지 URL"
+        "name": "달자네 뒷고기",
+        "address": "대전 유성구 진잠로78번길 49",
+        "description": "덜미살이 맛있는 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191116_147%2F1573910146754RNmdu_JPEG%2FkAJwT7tAj677Y6JDZ98L-Tpe.jpg"
       },
       {
-        "name": "관광지 2",
-        "address": "주소 2",
-        "description": "관광지 2 설명",
-        "image": "관광지 2 이미지 URL"
+        "name": "착한곱창",
+        "address": "대전 유성구 상대동로36번길 31",
+        "description": "곱이 가득 들어 고소한 곱창을 먹고 싶다면 착한 곱창으로...",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzAyMjVfNiAg%2FMDAxNjc3MzA0ODAxODM3.C_IhFIvKKKf_lzffjNcHn0w6oHGOLB0YgbMvvWxq_uIg.Yw2buWyw4NmkbDFrWgNCr1k6tOpRbaADA01O_LX6WAIg.JPEG%2F95549C2B-FC71-4103-98FF-DC0A033B3DF8.jpeg"
+      },
+      {
+        "name": "청해바지락칼국수",
+        "address": "대전 유성구 상대동로2번길 67-13 . 102,103호",
+        "description": "해감이 잘 되어있고 뽀얗고 시원한 칼국수",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200318_165%2F1584506586005LEJF3_JPEG%2FMgUU3zeE0lCV0apwHcHd2l4c.jpg"
+      },
+      {
+        "name": "늘상상",
+        "address": "대전 유성구 봉명서로 21-1 1층 늘상상",
+        "description": "유린기가 맛있는 감성있는 중식당",
+        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTNfMzkg%2FMDAxNjk3MjA3OTE3OTQ0.qpBmmikKQNGQKhvgz_R2jWyG8BA4Su1oXQSPgWJm0aIg.QX9Bg47IF7Ezk32Bk8yiFnItnMJJS9gxOtY7WdjYyokg.JPEG.sfs2612%2FKakaoTalk_20231013_225025767_06.jpg"
+      },
+      {
+        "name": "유성온천 족욕체험장",
+        "address": "대전 유성구 봉명동",
+        "description": "깨끗하고 힐링이 가득하고 산책하기가 좋은 곳",
+        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDFfMTkz%2FMDAxNjkzNTY2NDkzNjgz.BMdvEGbWAUROZFHfIn15XsCH9BjY4OnVcaioh1OmS8Yg.S3uHuQti9B1386cjBnD8auU5ShaHRndgrOOVudShpVQg.JPEG.neonadeuli72%2F%25C0%25AF%25BC%25BA%25BF%25C2%25C3%25B5%25B9%25AE%25C8%25AD%25B0%25F8%25BF%25F8_%252815%2529.JPG"
+      }
+    ]
+  },
+  "대전광역시/서구": {
+    "locations": [
+      {
+        "name": "델빠네",
+        "address": "대전 서구 원도안로207번길 16-61 1층",
+        "description": "분위기가 좋고 테라스가 있으며 한옥풍경 밤에는 조명까지 있어 힐링이 가능한 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_101%2F1693910392599DRxE7_JPEG%2FKakaoTalk_20230905_193740326_23.jpg",
+        "latitude": 36.3503409,
+        "longitude": 127.3848208
       }
     ]
   }
