@@ -489,8 +489,5 @@ fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가�
       })
       .catch((error) => {
         console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
-      })
-      .catch((error) => {
-        console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
       });
   });
