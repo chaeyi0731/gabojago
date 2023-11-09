@@ -232,6 +232,38 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200114_70%2F1579008854401Q0bIC_JPEG%2FZBSHIgTNAy4DZATvKa2iTEb1.jpg",
         "latitude": 36.3420012,
         "longitude": 127.4250555
+      },
+      {
+        "name": "대동하늘공원",
+        "address": "대전 동구 동대전로110번길 182",
+        "description": "전망 야경 보기 정말 좋은 곳 곳곳에 벽화가 있어 눈이 즐거운 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210618_176%2F1624003305179hxHf6_JPEG%2Fs6Q43GY067QT84UAf8VsMnkq.jpg",
+        "latitude": 36.3317193,
+        "longitude": 127.4515701
+      },
+      {
+        "name": "식장산",
+        "address": "대전 동구 낭월동 300",
+        "description": "야경이 정말 예쁜 곳 밤산책 하기 너무 좋은 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzA4MjFfMjAx%2FMDAxNjkyNjE3MDYyODY0.-RSMZ2FBwssgADCI6msAL7AvkoS_RjZv3Xa88CMHZHIg.NvxSl4OqGASXAupS4M_PKlRSDTLiK7tvbyUNwh4yqUwg.JPEG%2F4473772B-B8ED-4049-BD1D-BC98433D70A5.jpeg",
+        "latitude": 36.2999441,
+        "longitude": 127.4811228
+      },
+      {
+        "name": "치앙마이 방콕",
+        "address": "대전광역시 동구 소제동 299-617",
+        "description": "태국 현지 음식이 정말 궁금하다면 꼭 가봐야 할 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191121_146%2F1574336979417yJKn6_JPEG%2FjTBgDO9_AC9QN9utwqbQUcF4.jpg",
+        "latitude": 36.3340669,
+        "longitude": 127.4378002
+      },
+      {
+        "name": "원미면옥",
+        "address": "대전 동구 옥천로 419 원미면옥 (뒷집)",
+        "description": "초계국수 맛집, 근데 왕만두가 더 맛있음",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230626_118%2F1687740912689SfTxs_JPEG%2FIMG_6785.jpeg",
+        "latitude": 36.3319153,
+        "longitude": 127.4753493
       }
     ]
   }
