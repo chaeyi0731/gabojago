@@ -44,36 +44,37 @@ btn.addEventListener('click', function () {
   button.appendChild(daejeonButton);
   button.appendChild(gwangjuButton);
 });
-//구 를 나타 낼 div 생성
-const guDiv = document.createElement('div');
-maps.appendChild(guDiv);
-guDiv.style.display = 'flex';
-guDiv.style.alignItems = 'center';
-guDiv.style.flexDirection = 'column';
-
-//* 대전시 중구 버튼 동적 생성
-let jungu = document.createElement('button');
-guDiv.appendChild(jungu);
-
-//* 대전시 서구 버튼 동적 생성
-let seogu = document.createElement('button');
-guDiv.appendChild(seogu);
-
-//* 대전시 동구 버튼 동적 생성
-let dongu = document.createElement('button');
-guDiv.appendChild(dongu);
-
-//* 대전시 대덕구 버튼 동적 생성
-let daedokgu = document.createElement('button');
-guDiv.appendChild(daedokgu);
-console.log(daedokgu);
-
-//* 대전시 유성구 버튼 동적 생성
-let yuseonggu = document.createElement('button');
-guDiv.appendChild(yuseonggu);
 
 //* 대전 버튼 클릭 시 나옴
 daejeonButton.addEventListener('click', () => {
+  //구 를 나타 낼 div 생성
+  const guDiv = document.createElement('div');
+  maps.appendChild(guDiv);
+  guDiv.style.display = 'flex';
+  guDiv.style.alignItems = 'center';
+  guDiv.style.flexDirection = 'column';
+
+  //* 대전시 중구 버튼 동적 생성
+  let jungu = document.createElement('button');
+  guDiv.appendChild(jungu);
+
+  //* 대전시 서구 버튼 동적 생성
+  let seogu = document.createElement('button');
+  guDiv.appendChild(seogu);
+
+  //* 대전시 동구 버튼 동적 생성
+  let dongu = document.createElement('button');
+  guDiv.appendChild(dongu);
+
+  //* 대전시 대덕구 버튼 동적 생성
+  let daedokgu = document.createElement('button');
+  guDiv.appendChild(daedokgu);
+  console.log(daedokgu);
+
+  //* 대전시 유성구 버튼 동적 생성
+  let yuseonggu = document.createElement('button');
+  guDiv.appendChild(yuseonggu);
+
   jungu.textContent = '중구';
   jungu.style.color = 'white';
   seogu.textContent = '서구';
