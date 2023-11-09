@@ -196,6 +196,22 @@
         "image": "https://d12zq4w4guyljn.cloudfront.net/20230307073101083_photo_48c791ecc066.jpg",
         "latitude": 36.3592645,
         "longitude": 127.4265939
+      },
+      {
+        "name": "하늘정원",
+        "address": "대전광역시 대덕구 오정동 172-3",
+        "description": "계란찜이 진짜 맛있는 한남대 부근 한식 맛집",
+        "image": "https://d12zq4w4guyljn.cloudfront.net/20200131094935_photo1_c6f2f647ed2c.jpg",
+        "latitude": 36.3514193,
+        "longitude": 127.4207874
+      },
+      {
+        "name": "몽심",
+        "address": "대전 대덕구 한남로38번길 28 1층",
+        "description": "마들렌과 휘낭시에가 맛있는 한남대 디저트 맛집 제작자 피셜 여기 케이크도 최고다... ",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221231_80%2F1672473933483qNzP5_JPEG%2F8E2BB573-42F5-492C-821A-8070A0F2A898.jpeg",
+        "latitude": 36.3509555,
+        "longitude": 127.4241946
       }
     ]
   },
