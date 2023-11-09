@@ -44,12 +44,12 @@ btn.addEventListener('click', function () {
   button.appendChild(daejeonButton);
   button.appendChild(gwangjuButton);
 });
-
+const guDiv = document.createElement('div');
+maps.appendChild(guDiv);
+console.dir(guDiv);
 //* 대전 버튼 클릭 시 나옴
 daejeonButton.addEventListener('click', () => {
   //구 를 나타 낼 div 생성
-  const guDiv = document.createElement('div');
-  maps.appendChild(guDiv);
   guDiv.style.display = 'flex';
   guDiv.style.alignItems = 'center';
   guDiv.style.flexDirection = 'column';
@@ -75,6 +75,7 @@ daejeonButton.addEventListener('click', () => {
   let yuseonggu = document.createElement('button');
   guDiv.appendChild(yuseonggu);
 
+  //* 버튼들 스타일 지정
   jungu.textContent = '중구';
   jungu.style.color = 'white';
   seogu.textContent = '서구';
@@ -88,6 +89,10 @@ daejeonButton.addEventListener('click', () => {
   yuseonggu.textContent = '유성구';
   yuseonggu.style.color = 'white';
 });
+//* 만들어진 구버튼들 클릭이벤트 작용하도록 밖에서 변수 선언
+
+const jungu = guDiv.children[0];
+console.log(jungu);
 
 fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가져옵니다.
   .then((response) => {
