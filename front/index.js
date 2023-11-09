@@ -91,9 +91,6 @@ daejeonButton.addEventListener('click', () => {
 });
 //* 만들어진 구버튼들 클릭이벤트 작용하도록 밖에서 변수 선언
 
-const jungu = guDiv.children[0];
-console.log(jungu);
-
 fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가져옵니다.
   .then((response) => {
     return response.json(); // JSON 데이터로 변환합니다.
@@ -103,6 +100,7 @@ fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가�
     jungu.addEventListener('click', () => {
       const junguData = data['대전광역시/중구'];
       guDiv.innerHTML = '';
+      classList.add('jungu');
 
       const locationList = document.createElement('ul');
       locationList.className = 'location-list';
