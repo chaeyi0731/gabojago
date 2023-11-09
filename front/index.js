@@ -66,6 +66,7 @@ guDiv.appendChild(dongu);
 //* 대전시 대덕구 버튼 동적 생성
 let daedokgu = document.createElement('button');
 guDiv.appendChild(daedokgu);
+console.log(daedokgu);
 
 //* 대전시 유성구 버튼 동적 생성
 let yuseonggu = document.createElement('button');
@@ -376,67 +377,63 @@ fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가�
       locationList.style.width = '25vw';
     });
     //* 동구 이벤트 리스너
-    dongu
-      .addEventListener('click', () => {
-        const donguData = data['대전광역시/동구'];
-        guDiv.innerHTML = '';
+    dongu.addEventListener('click', () => {
+      const donguData = data['대전광역시/동구'];
+      guDiv.innerHTML = '';
 
-        const locationList = document.createElement('ul');
-        locationList.className = 'location-list';
+      const locationList = document.createElement('ul');
+      locationList.className = 'location-list';
 
-        donguData.locations.forEach((location) => {
-          const listItem = document.createElement('li');
+      donguData.locations.forEach((location) => {
+        const listItem = document.createElement('li');
 
-          // 이미지 추가
-          const image = document.createElement('img');
-          image.src = location.image;
-          image.alt = location.name;
-          image.style.width = '15vw';
-          listItem.appendChild(image);
+        // 이미지 추가
+        const image = document.createElement('img');
+        image.src = location.image;
+        image.alt = location.name;
+        image.style.width = '15vw';
+        listItem.appendChild(image);
 
-          // 이름 추가
-          const name = document.createElement('p');
-          name.textContent = `이름: ${location.name}`;
-          listItem.appendChild(name);
+        // 이름 추가
+        const name = document.createElement('p');
+        name.textContent = `이름: ${location.name}`;
+        listItem.appendChild(name);
 
-          // 주소 추가
-          const address = document.createElement('p');
-          address.textContent = `주소: ${location.address}`;
-          listItem.appendChild(address);
+        // 주소 추가
+        const address = document.createElement('p');
+        address.textContent = `주소: ${location.address}`;
+        listItem.appendChild(address);
 
-          listItem.addEventListener('click', function () {
-            // 클릭한 장소의 위도와 경도를 가져옴
-            const latitude = location.latitude;
-            const longitude = location.longitude;
+        listItem.addEventListener('click', function () {
+          // 클릭한 장소의 위도와 경도를 가져옴
+          const latitude = location.latitude;
+          const longitude = location.longitude;
 
-            // 지도를 해당 위치로 이동
-            const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-            map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-          });
-
-          // 설명 추가
-          const description = document.createElement('p');
-          description.textContent = `설명: ${location.description}`;
-          listItem.appendChild(description);
-
-          locationList.appendChild(listItem);
-
-          listItem.style.width = '20vw';
+          // 지도를 해당 위치로 이동
+          const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
+          map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
         });
 
-        guDiv.appendChild(locationList);
+        // 설명 추가
+        const description = document.createElement('p');
+        description.textContent = `설명: ${location.description}`;
+        listItem.appendChild(description);
 
-        // 목록이 스크롤 가능하도록 스타일링 추가
-        locationList.style.overflowY = 'auto';
-        locationList.style.maxHeight = '600px';
-        locationList.style.width = '25vw';
-      })
-      .catch((error) => {
-        console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
+        locationList.appendChild(listItem);
+
+        listItem.style.width = '20vw';
       });
-    //* 대덕구 이벤트 리스너
+
+      guDiv.appendChild(locationList);
+
+      // 목록이 스크롤 가능하도록 스타일링 추가
+      locationList.style.overflowY = 'auto';
+      locationList.style.maxHeight = '600px';
+      locationList.style.width = '25vw';
+    }); //* 대덕구 이벤트 리스너
     daedokgu
       .addEventListener('click', () => {
+        console.log('ok');
         const daedokguData = data['대전광역시/대덕구'];
         guDiv.innerHTML = '';
 
@@ -489,6 +486,9 @@ fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가�
         locationList.style.overflowY = 'auto';
         locationList.style.maxHeight = '600px';
         locationList.style.width = '25vw';
+      })
+      .catch((error) => {
+        console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
       })
       .catch((error) => {
         console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
