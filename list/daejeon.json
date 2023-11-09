@@ -212,6 +212,14 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221231_80%2F1672473933483qNzP5_JPEG%2F8E2BB573-42F5-492C-821A-8070A0F2A898.jpeg",
         "latitude": 36.3509555,
         "longitude": 127.4241946
+      },
+      {
+        "name": "동춘당",
+        "address": "대전 대덕구 동춘당로 80 동춘당",
+        "description": "산책로가 잘 되어있는 곳",
+        "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA5MThfMTYg%2FMDAxNTA1NzQ1NzE3Nzkx.sbEF3bvHEZPNqJI1ErWI-TCe_sLkw-zfL2e-6DxTKqUg.mikRd9Zr9OipL_4US9dGnBHOaM153YYbRIIEI_5jBIMg.JPEG.jvj24601%2F%25B4%25EB%25C0%25FC.%25B5%25BF%25C3%25E1%25B4%25E7.02.%25B5%25BF%25C3%25E1%25B4%25E7%25B0%25ED%25C5%25C3.170916_%252816%2529.jpg%231066x600",
+        "latitude": 36.3653759,
+        "longitude": 127.4412873
       }
     ]
   },
