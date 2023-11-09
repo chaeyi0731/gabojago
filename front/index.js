@@ -24,7 +24,6 @@ gwangjuButton.style.color = 'white';
 // 버튼에 클릭 이벤트 리스너를 추가합니다.
 btn.addEventListener('click', function () {
   // 클릭 이벤트가 발생했을 때 실행할 코드를 작성합니다.
-
   // 버튼을 숨김 처리합니다.
   daejeonButton.style.display = 'none';
   gwangjuButton.style.display = 'none';
@@ -44,6 +43,7 @@ btn.addEventListener('click', function () {
   button.appendChild(daejeonButton);
   button.appendChild(gwangjuButton);
 });
+
 //구 를 나타 낼 div 생성
 const guDiv = document.createElement('div');
 maps.appendChild(guDiv);
@@ -377,4 +377,10 @@ daejeonButton.addEventListener('click', () => {
           );
         });
     });
+});
+
+//* 광주 버튼 클릭시 이벤트
+//! 구현 아직 안됨 대전 완료 후 넣을 예정
+gwangjuButton.addEventListener('click', () => {
+  alert('아직 구현 되지 않았습니다~');
 });
