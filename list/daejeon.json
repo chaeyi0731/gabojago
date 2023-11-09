@@ -176,6 +176,38 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231031_61%2F1698714303695EOXuQ_JPEG%2FIMG_3539.jpg",
         "latitude": 36.3482147,
         "longitude": 127.3785038
+      },
+      {
+        "name": "둔산동 주먹구이",
+        "address": "대전 서구 둔산남로9번길 37 2층 샤브작",
+        "description": "두툼한 고기 썰 필요 없이 초반에 굽다가 사장님이 가져가셔서 썰어주심! 진짜 맛있다 여기...",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzA4MjRfMjk0%2FMDAxNjkyODQxMDY0MjE2.fln-GR1aRszmQhxvjqbGZofkP_gz8pS8nbf337NlPBog.o3ZItxGBvJj65d39I9JtuquSshDkgS4wex2BF7Mnw1Ug.JPEG%2F209BEADF-F6D1-427E-8420-E2A6089C5455.jpeg",
+        "latitude": 36.3523913,
+        "longitude": 127.3738514
+      },
+      {
+        "name": "시장스시",
+        "address": "대전 서구 만년로18번길 9",
+        "description": "초잘알 지인이 추천 해준 초밥 집 안 가볼 이유가 없다",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221107_164%2F1667775923918DQP8E_JPEG%2F20221107_080448.jpg",
+        "latitude": 36.3668977,
+        "longitude": 127.375022
+      },
+      {
+        "name": "모루",
+        "address": "대전 서구 둔산남로9번길 29",
+        "description": "에그베네딕트가 너무 맛있는 집 브런치 맛집이라 메뉴 하나하나가 다 맛있는 집",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210426_176%2F1619419212342NwbtV_JPEG%2FRa-GIQSexNOkBtA7e9DK22NM.jpeg.jpg",
+        "latitude": 36.3494318,
+        "longitude": 127.3782097
+      },
+      {
+        "name": "향마루",
+        "address": "대전 서구 계룡로491번길 78 2층",
+        "description": "가성비 갑, 매일 달라지는 반찬을 즐길 수 있고 집밥이 그리울 때 가면 너무 좋은 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190702_254%2F1562060494279rb5JY_JPEG%2F59-ryD5ViCIEHkAPiyBCPJgH.jpg",
+        "latitude": 36.3481571,
+        "longitude": 127.3821603
       }
     ]
   },
