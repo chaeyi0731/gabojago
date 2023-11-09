@@ -430,7 +430,7 @@ fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가�
       locationList.style.overflowY = 'auto';
       locationList.style.maxHeight = '600px';
       locationList.style.width = '25vw';
-    }); //* 대덕구 이벤트 리스너
+    }); //* 대덕구 이벤트 리스너 확인용!!
     daedokgu
       .addEventListener('click', () => {
         console.log('ok');
