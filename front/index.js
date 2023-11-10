@@ -66,9 +66,12 @@ btn.addEventListener('click', async () => {
   // 데이터 로드 함수
   async function loadDistrictData(district) {
     try {
-      const response = await fetch(`/list/${district}.json`);
+      const response = await fetch('/list/daejeon.json');
+
       if (!response.ok) {
-        throw new Error('데이터를 가져오는 데 문제가 발생했습니다.');
+        throw new Error(
+          `서버 응답 오류: ${response.status} ${response.statusText}`
+        );
       }
 
       const data = await response.json();
@@ -115,6 +118,7 @@ btn.addEventListener('click', async () => {
       locationList.style.maxHeight = '600px';
       locationList.style.width = '25vw';
     } catch (error) {
+      console.error('데이터 로드 중 오류가 발생했습니다:', error);
       throw new Error('데이터 로드 중 오류가 발생했습니다.');
     }
   }
