@@ -16,6 +16,20 @@ const btn = document.getElementById('btn');
 function applyButtonStyle(button) {
   button.style.color = 'white';
 }
+
+//* 동적 버튼 간소화
+function createButton(text, clickHandler) {
+  //* 버튼 생성이벤트
+  const button = document.createElement('button');
+  //* 버튼 안에 쓰여져 있는 것
+  button.textContent = text;
+  //* 버튼 스타일 지정
+  applyButtonStyle(button);
+  //* 버튼에 또 버튼 이벤트
+  button.addEventListener('click', clickHandler);
+  return button;
+}
+
 // "대전" 버튼 엘리먼트를 생성합니다.
 const daejeonButton = document.createElement('button');
 daejeonButton.textContent = '대전';
