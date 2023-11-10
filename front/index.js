@@ -32,7 +32,10 @@ function createButton(text, clickHandler) {
 const regionButtons = [];
 
 // 대전 버튼 생성
-const daejeonButton = createButton('대전', () => toggleButtons(regionButtons));
+const daejeonButton = createButton('대전', () => {
+  toggleButtons(regionButtons);
+  toggleGuButtons();
+});
 // toggleButtons(guButtons); // 구 버튼들을 토글합니다.
 //* 토글버튼 밑에서 설명 예정
 
@@ -55,7 +58,6 @@ btn.addEventListener('click', function () {
 // *버튼을 토글하는 함수
 function toggleButtons(buttons) {
   buttons.forEach((button) => {
-    //* 버튼을 누르면 보이고 다시 누르면 보이지 않는 로직
     const currentDisplay = button.style.display;
     button.style.display = currentDisplay === 'none' ? 'block' : 'none';
   });
@@ -64,307 +66,59 @@ function toggleButtons(buttons) {
 // 구 버튼을 담을 배열
 const guButtons = [];
 
-// 각 구 버튼 생성 함수
-function createGuButton(district, data) {
-  const button = createButton(district, () => loadDistrictData(data));
-  guDiv.appendChild(button);
-  guButtons.push(button);
-}
+//*구 를 나타 낼 div 생성
+const guDiv = document.createElement('div');
+maps.appendChild(guDiv);
+guDiv.style.display = 'flex';
+guDiv.style.alignItems = 'center';
+guDiv.style.flexDirection = 'column';
 
-//* 대전 구 버튼 생성
-createGuButton('중구', '대전광역시/중구');
-createGuButton('서구', '대전광역시/서구');
-createGuButton('동구', '대전광역시/동구');
-createGuButton('대덕구', '대전광역시/대덕구');
-createGuButton('유성구', '대전광역시/유성구');
-
-fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가져옵니다.
-  .then((response) => {
-    return response.json(); // JSON 데이터로 변환합니다.
-  })
-  .then((data) => {
-    // * 구 버튼 클릭시 이벤트 리스너
-    jungu.addEventListener('click', () => {
-      const junguData = data['대전광역시/중구'];
-      guDiv.innerHTML = '';
-
-      const locationList = document.createElement('ul');
-      locationList.className = 'location-list';
-
-      junguData.locations.forEach((location) => {
-        const listItem = document.createElement('li');
-
-        // 이미지 추가
-        const image = document.createElement('img');
-        image.src = location.image;
-        image.alt = location.name;
-        image.style.width = '15vw';
-        listItem.appendChild(image);
-
-        // 이름 추가
-        const name = document.createElement('p');
-        name.textContent = `이름: ${location.name}`;
-        listItem.appendChild(name);
-
-        // 주소 추가
-        const address = document.createElement('p');
-        address.textContent = `주소: ${location.address}`;
-        listItem.appendChild(address);
-
-        listItem.addEventListener('click', function () {
-          // 클릭한 장소의 위도와 경도를 가져옴
-          const latitude = location.latitude;
-          const longitude = location.longitude;
-
-          // 지도를 해당 위치로 이동
-          const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-          map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-        });
-
-        // 설명 추가
-        const description = document.createElement('p');
-        description.textContent = `설명: ${location.description}`;
-        listItem.appendChild(description);
-
-        locationList.appendChild(listItem);
-
-        listItem.style.width = '20vw';
-      });
-
-      guDiv.appendChild(locationList);
-
-      // 목록이 스크롤 가능하도록 스타일링 추가
-      locationList.style.overflowY = 'auto';
-      locationList.style.maxHeight = '600px';
-      locationList.style.width = '25vw';
-    });
-    yuseonggu.addEventListener('click', () => {
-      const yuseongguuData = data['대전광역시/유성구'];
-      guDiv.innerHTML = '';
-
-      const locationList = document.createElement('ul');
-      locationList.className = 'location-list';
-
-      yuseongguuData.locations.forEach((location) => {
-        const listItem = document.createElement('li');
-
-        // 이미지 추가
-        const image = document.createElement('img');
-        image.src = location.image;
-        image.alt = location.name;
-        image.style.width = '15vw';
-        listItem.appendChild(image);
-
-        // 이름 추가
-        const name = document.createElement('p');
-        name.textContent = `이름: ${location.name}`;
-        listItem.appendChild(name);
-
-        // 주소 추가
-        const address = document.createElement('p');
-        address.textContent = `주소: ${location.address}`;
-        listItem.appendChild(address);
-
-        listItem.addEventListener('click', function () {
-          // 클릭한 장소의 위도와 경도를 가져옴
-          const latitude = location.latitude;
-          const longitude = location.longitude;
-
-          // 지도를 해당 위치로 이동
-          const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-          map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-        });
-
-        // 설명 추가
-        const description = document.createElement('p');
-        description.textContent = `설명: ${location.description}`;
-        listItem.appendChild(description);
-
-        locationList.appendChild(listItem);
-
-        listItem.style.width = '20vw';
-      });
-
-      guDiv.appendChild(locationList);
-
-      // 목록이 스크롤 가능하도록 스타일링 추가
-      locationList.style.overflowY = 'auto';
-      locationList.style.maxHeight = '600px';
-      locationList.style.width = '25vw';
-    });
-    //* 서구 이벤트 리스너
-    seogu.addEventListener('click', () => {
-      const seoguData = data['대전광역시/서구'];
-      guDiv.innerHTML = '';
-
-      const locationList = document.createElement('ul');
-      locationList.className = 'location-list';
-
-      seoguData.locations.forEach((location) => {
-        const listItem = document.createElement('li');
-
-        // 이미지 추가
-        const image = document.createElement('img');
-        image.src = location.image;
-        image.alt = location.name;
-        image.style.width = '15vw';
-        listItem.appendChild(image);
-
-        // 이름 추가
-        const name = document.createElement('p');
-        name.textContent = `이름: ${location.name}`;
-        listItem.appendChild(name);
-
-        // 주소 추가
-        const address = document.createElement('p');
-        address.textContent = `주소: ${location.address}`;
-        listItem.appendChild(address);
-
-        listItem.addEventListener('click', function () {
-          // 클릭한 장소의 위도와 경도를 가져옴
-          const latitude = location.latitude;
-          const longitude = location.longitude;
-
-          // 지도를 해당 위치로 이동
-          const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-          map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-        });
-
-        // 설명 추가
-        const description = document.createElement('p');
-        description.textContent = `설명: ${location.description}`;
-        listItem.appendChild(description);
-
-        locationList.appendChild(listItem);
-
-        listItem.style.width = '20vw';
-      });
-
-      guDiv.appendChild(locationList);
-
-      // 목록이 스크롤 가능하도록 스타일링 추가
-      locationList.style.overflowY = 'auto';
-      locationList.style.maxHeight = '600px';
-      locationList.style.width = '25vw';
-    });
-    //* 동구 이벤트 리스너
-    dongu.addEventListener('click', () => {
-      const donguData = data['대전광역시/동구'];
-      guDiv.innerHTML = '';
-
-      const locationList = document.createElement('ul');
-      locationList.className = 'location-list';
-
-      donguData.locations.forEach((location) => {
-        const listItem = document.createElement('li');
-
-        // 이미지 추가
-        const image = document.createElement('img');
-        image.src = location.image;
-        image.alt = location.name;
-        image.style.width = '15vw';
-        listItem.appendChild(image);
-
-        // 이름 추가
-        const name = document.createElement('p');
-        name.textContent = `이름: ${location.name}`;
-        listItem.appendChild(name);
-
-        // 주소 추가
-        const address = document.createElement('p');
-        address.textContent = `주소: ${location.address}`;
-        listItem.appendChild(address);
-
-        listItem.addEventListener('click', function () {
-          // 클릭한 장소의 위도와 경도를 가져옴
-          const latitude = location.latitude;
-          const longitude = location.longitude;
-
-          // 지도를 해당 위치로 이동
-          const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-          map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-        });
-
-        // 설명 추가
-        const description = document.createElement('p');
-        description.textContent = `설명: ${location.description}`;
-        listItem.appendChild(description);
-
-        locationList.appendChild(listItem);
-
-        listItem.style.width = '20vw';
-      });
-
-      guDiv.appendChild(locationList);
-
-      // 목록이 스크롤 가능하도록 스타일링 추가
-      locationList.style.overflowY = 'auto';
-      locationList.style.maxHeight = '600px';
-      locationList.style.width = '25vw';
-    }); //* 대덕구 이벤트 리스너 확인용!!
-    daedokgu
-      .addEventListener('click', () => {
-        console.log('ok');
-        const daedokguData = data['대전광역시/대덕구'];
+fetch('/list/daejeon.json'); // list 폴더에 있는 daejeon.json 파일을 가져옵니다.
+function loadDistrictData(district) {
+  fetch(`/list/${district}.json`)
+    .then((response) => response.json())
+    .then((data) => {
+      //* 대전 버튼 클릭 이벤트
+      daejeonButton.addEventListener('click', () => {
         guDiv.innerHTML = '';
+
+        //* 대전 구 버튼 생성
+        // 각 구 버튼 생성 함수
+        function createGuButton(district, data) {
+          const button = createButton(district, () => loadDistrictData(data));
+          guDiv.appendChild(button);
+          // guButtons.push(button);
+        }
+
+        createGuButton('중구', '대전광역시/중구');
+        createGuButton('서구', '대전광역시/서구');
+        createGuButton('동구', '대전광역시/동구');
+        createGuButton('대덕구', '대전광역시/대덕구');
+        createGuButton('유성구', '대전광역시/유성구');
 
         const locationList = document.createElement('ul');
         locationList.className = 'location-list';
 
-        daedokguData.locations.forEach((location) => {
+        daejeonData.locations.forEach((location) => {
           const listItem = document.createElement('li');
-
-          // 이미지 추가
-          const image = document.createElement('img');
-          image.src = location.image;
-          image.alt = location.name;
-          image.style.width = '15vw';
-          listItem.appendChild(image);
-
-          // 이름 추가
-          const name = document.createElement('p');
-          name.textContent = `이름: ${location.name}`;
-          listItem.appendChild(name);
-
-          // 주소 추가
-          const address = document.createElement('p');
-          address.textContent = `주소: ${location.address}`;
-          listItem.appendChild(address);
-
-          listItem.addEventListener('click', function () {
-            // 클릭한 장소의 위도와 경도를 가져옴
-            const latitude = location.latitude;
-            const longitude = location.longitude;
-
-            // 지도를 해당 위치로 이동
-            const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-            map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-          });
-
-          // 설명 추가
-          const description = document.createElement('p');
-          description.textContent = `설명: ${location.description}`;
-          listItem.appendChild(description);
-
+          // ... 각 location에 대한 처리 코드가 들어갑니다.
           locationList.appendChild(listItem);
-
-          listItem.style.width = '20vw';
         });
 
         guDiv.appendChild(locationList);
-
-        // 목록이 스크롤 가능하도록 스타일링 추가
-        locationList.style.overflowY = 'auto';
-        locationList.style.maxHeight = '600px';
-        locationList.style.width = '25vw';
-      })
-      .catch((error) => {
-        console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
       });
-  });
 
-//* 광주 버튼 클릭시 이벤트
-//! 구현 아직 안됨 대전 완료 후 넣을 예정
-gwangjuButton.addEventListener('click', () => {
-  alert('아직 구현 되지 않았습니다~');
-});
+      const locationList = document.createElement('ul');
+      locationList.className = 'location-list';
+
+      data.locations.forEach((location) => {});
+
+      guDiv.appendChild(locationList);
+      locationList.style.overflowY = 'auto';
+      locationList.style.maxHeight = '600px';
+      locationList.style.width = '25vw';
+    })
+    .catch((error) => {
+      console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error);
+    });
+}
