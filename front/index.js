@@ -11,6 +11,11 @@ const maps = document.getElementsByClassName('mapandbutton')[0];
 
 // "btn" 버튼 엘리먼트를 가져옵니다.
 const btn = document.getElementById('btn');
+
+//* 버튼 스타일 겹치는게 많아 하나의 함수로 지정
+function applyButtonStyle(button) {
+  button.style.color = 'white';
+}
 // "대전" 버튼 엘리먼트를 생성합니다.
 const daejeonButton = document.createElement('button');
 daejeonButton.textContent = '대전';
