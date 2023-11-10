@@ -6,6 +6,33 @@ var mapOptions = {
 var map = new naver.maps.Map('map', mapOptions);
 
 var map = new naver.maps.Map('map', mapOptions);
+var HOME_PATH = window.HOME_PATH || '.';
+
+var HOME_PATH = window.HOME_PATH || '.';
+var position = new naver.maps.LatLng(36.3503409, 127.3848208);
+
+var map = new naver.maps.Map('map', {
+    center: position,
+    zoom: 19
+});
+
+var markerOptions = {
+    position: position.destinationPoint(90, 15),
+    map: map,
+    icon: {
+        url: HOME_PATH +'/image.png',
+        size: new naver.maps.Size(30, 30),
+        origin: new naver.maps.Point(0, 0),
+        anchor: new naver.maps.Point(25, 26),
+        
+    },
+
+}
+
+var marker = new naver.maps.Marker(markerOptions);
+
+
+
 const button = document.getElementsByClassName('button')[0];
 const maps = document.getElementsByClassName('mapandbutton')[0];
 
@@ -56,7 +83,6 @@ daejeonButton.addEventListener('click', () => {
   //* 대전시 중구 버튼 동적 생성
   let jungu = document.createElement('button');
   guDiv.appendChild(jungu);
-
   //* 대전시 서구 버튼 동적 생성
   let seogu = document.createElement('button');
   guDiv.appendChild(seogu);
@@ -86,6 +112,7 @@ daejeonButton.addEventListener('click', () => {
 
   yuseonggu.textContent = '유성구';
   yuseonggu.style.color = 'white';
+
 
   fetch('/list/daejeon.json') // list 폴더에 있는 daejeon.json 파일을 가져옵니다.
     .then((response) => {
@@ -128,6 +155,7 @@ daejeonButton.addEventListener('click', () => {
             // 지도를 해당 위치로 이동
             const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
             map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+            marker.setPosition(daejeonLocation)
           });
 
           // 설명 추가
@@ -182,6 +210,7 @@ daejeonButton.addEventListener('click', () => {
             // 지도를 해당 위치로 이동
             const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
             map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+            marker.setPosition(daejeonLocation)
           });
 
           // 설명 추가
@@ -237,6 +266,7 @@ daejeonButton.addEventListener('click', () => {
             // 지도를 해당 위치로 이동
             const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
             map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+            marker.setPosition(daejeonLocation)
           });
 
           // 설명 추가
@@ -292,6 +322,7 @@ daejeonButton.addEventListener('click', () => {
             // 지도를 해당 위치로 이동
             const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
             map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+            marker.setPosition(daejeonLocation)
           });
 
           // 설명 추가
@@ -351,6 +382,7 @@ daejeonButton.addEventListener('click', () => {
                 longitude
               );
               map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+              marker.setPosition(daejeonLocation)
             });
 
             // 설명 추가
@@ -384,3 +416,5 @@ daejeonButton.addEventListener('click', () => {
 gwangjuButton.addEventListener('click', () => {
   alert('아직 구현 되지 않았습니다~');
 });
+
+
