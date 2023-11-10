@@ -17,8 +17,18 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/list/daejeon.json', (req, res) => {
-  res.sendFile(jsonFilePath);
+app.get('/list/:district.json', (req, res) => {
+  const district = req.params.district;
+  const jsonFilePath = path.join(__dirname, 'list', `${district}.json`);
+
+  fs.readFile(jsonFilePath, (err, data) => {
+    if (err) {
+      res.status(500).send('Internal Server Error');
+    } else {
+      res.setHeader('Content-Type', 'application/json');
+      res.send(data);
+    }
+  });
 });
 
 const PORT = process.env.PORT || 8080;
