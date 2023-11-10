@@ -4,8 +4,6 @@ var mapOptions = {
 };
 
 var map = new naver.maps.Map('map', mapOptions);
-
-var map = new naver.maps.Map('map', mapOptions);
 const button = document.getElementsByClassName('button')[0];
 const maps = document.getElementsByClassName('mapandbutton')[0];
 
@@ -30,38 +28,37 @@ function createButton(text, clickHandler) {
   return button;
 }
 
-// "대전" 버튼 엘리먼트를 생성합니다.
-const daejeonButton = document.createElement('button');
-daejeonButton.textContent = '대전';
-daejeonButton.style.color = 'white';
+// 대전과 광주 버튼을 담을 배열
+const regionButtons = [];
 
-// "광주" 버튼 엘리먼트를 생성합니다.
-const gwangjuButton = document.createElement('button');
-gwangjuButton.textContent = '광주';
-gwangjuButton.style.color = 'white';
+// 대전 버튼 생성
+const daejeonButton = createButton('대전', () => toggleButtons(regionButtons));
+// toggleButtons(guButtons); // 구 버튼들을 토글합니다.
+//* 토글버튼 밑에서 설명 예정
+
+// 광주 버튼 생성 (구현은 아직 안되었으니 알림창만 띄웁니다.)
+const gwangjuButton = createButton('광주', () =>
+  alert('아직 구현되지 않았습니다~')
+);
+
+//* 버튼 배열에 추가
+regionButtons.push(daejeonButton, gwangjuButton);
 
 // 버튼에 클릭 이벤트 리스너를 추가합니다.
 btn.addEventListener('click', function () {
-  // 클릭 이벤트가 발생했을 때 실행할 코드를 작성합니다.
-  // 버튼을 숨김 처리합니다.
-  daejeonButton.style.display = 'none';
-  gwangjuButton.style.display = 'none';
-
-  // 클릭 이벤트를 추가합니다.
-  btn.addEventListener('click', function () {
-    // "대전"과 "광주" 버튼을 토글하여 보이게 하거나 숨깁니다.
-    if (daejeonButton.style.display === 'none') {
-      daejeonButton.style.display = 'block';
-      gwangjuButton.style.display = 'block';
-    } else {
-      daejeonButton.style.display = 'none';
-      gwangjuButton.style.display = 'none';
-    }
-  });
-
+  toggleButtons(regionButtons);
   button.appendChild(daejeonButton);
   button.appendChild(gwangjuButton);
 });
+
+// *버튼을 토글하는 함수
+function toggleButtons(buttons) {
+  buttons.forEach((button) => {
+    //* 버튼을 누르면 보이고 다시 누르면 보이지 않는 로직
+    const currentDisplay = button.style.display;
+    button.style.display = currentDisplay === 'none' ? 'block' : 'none';
+  });
+}
 
 //구 를 나타 낼 div 생성
 const guDiv = document.createElement('div');
