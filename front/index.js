@@ -82,7 +82,10 @@ btn.addEventListener('click', async () => {
 
   async function loadDistrictData(city, guName) {
     try {
-      const response = await fetch(`/list/daejeon.json`);
+      // 클라이언트에서 강제로 새로운 데이터를 받아오도록 설정
+      const response = await fetch(`/list/daejeon.json`, {
+        cache: 'no-store', // 클라이언트에서 캐시 사용하지 않음
+      });
 
       if (response.status !== 200) {
         throw new Error(
@@ -100,7 +103,6 @@ btn.addEventListener('click', async () => {
       displayLocations(data.locations);
     } catch (error) {
       console.error('데이터 로드 중 오류 발생:', error.message);
-      // 여기에서 필요에 따라 추가적인 로깅이나 예외 처리를 수행할 수 있습니다.
     }
   }
 
