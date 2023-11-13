@@ -6,6 +6,7 @@ var mapOptions = {
 var map = new naver.maps.Map('map', mapOptions);
 
 var HOME_PATH = window.HOME_PATH || '.';
+
 var position = new naver.maps.LatLng(36.3503409, 127.3848208);
 
 var markerOptions = {
@@ -116,6 +117,7 @@ daejeonButton.addEventListener('click', () => {
                 longitude
               );
               map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+              marker.setPosition(daejeonLocation);
             });
 
             // 설명 추가
