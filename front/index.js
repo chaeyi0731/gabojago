@@ -31,7 +31,9 @@ var marker = new naver.maps.Marker(markerOptions);
 
 const button = document.getElementsByClassName('button')[0];
 const maps = document.getElementsByClassName('mapandbutton')[0];
+const btn = document.getElementById('btn');
 
+console.log(btn);
 btn.addEventListener('click', async () => {
   // 대전, 광주 버튼 생성
   const daejeonButton = createStyledButton('대전', async () => {
