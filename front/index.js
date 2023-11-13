@@ -32,6 +32,12 @@ const marker = new naver.maps.Marker(markerOptions);
 const button = document.getElementsByClassName('button')[0];
 const maps = document.getElementsByClassName('mapandbutton')[0];
 const btn = document.getElementById('btn');
+const guDiv = document.createElement('div');
+
+maps.appendChild(guDiv);
+guDiv.style.display = 'flex';
+guDiv.style.alignItems = 'center';
+guDiv.style.flexDirection = 'column';
 
 console.log(btn);
 btn.addEventListener('click', async () => {
@@ -144,10 +150,3 @@ btn.addEventListener('click', async () => {
   button.appendChild(daejeonButton);
   button.appendChild(gwangjuButton);
 });
-
-//구 를 나타 낼 div 생성
-const guDiv = document.createElement('div');
-maps.appendChild(guDiv);
-guDiv.style.display = 'flex';
-guDiv.style.alignItems = 'center';
-guDiv.style.flexDirection = 'column';
