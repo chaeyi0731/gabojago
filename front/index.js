@@ -68,9 +68,9 @@ btn.addEventListener('click', async () => {
     }
   }
 
-  // 데이터 로드 함수
-  async function loadDistrictData() {
+  async function loadDistrictData(city, guName) {
     try {
+      // 여기서 경로를 고정된 값으로 사용합니다.
       const response = await fetch(`/list/daejeon.json`);
 
       if (!response.ok) {
