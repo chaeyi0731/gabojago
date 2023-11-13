@@ -1,15 +1,15 @@
-var mapOptions = {
+const mapOptions = {
   center: new naver.maps.LatLng(36.3503409, 127.3848208),
   zoom: 20,
 };
 
-var map = new naver.maps.Map('map', mapOptions);
+const map = new naver.maps.Map('map', mapOptions);
 
-var HOME_PATH = window.HOME_PATH || '.';
+const HOME_PATH = window.HOME_PATH || '.';
 
-var position = new naver.maps.LatLng(36.3503409, 127.3848208);
+const position = new naver.maps.LatLng(36.3503409, 127.3848208);
 
-var markerOptions = {
+const markerOptions = {
   position: position.destinationPoint(90, 15),
   map: map,
   icon: {
@@ -20,7 +20,7 @@ var markerOptions = {
   },
 };
 
-var marker = new naver.maps.Marker(markerOptions);
+const marker = new naver.maps.Marker(markerOptions);
 
 const button = document.getElementsByClassName('button')[0];
 const maps = document.getElementsByClassName('mapandbutton')[0];
