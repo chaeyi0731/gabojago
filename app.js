@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/list/daejeon.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json'); // JSON 형식으로 응답 설정
   res.sendFile(jsonFilePath);
 });
 
