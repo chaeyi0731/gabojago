@@ -78,7 +78,6 @@ btn.addEventListener('click', async () => {
 
   async function loadDistrictData(city, guName) {
     try {
-      // 여기서 경로를 고정된 값으로 사용합니다.
       const response = await fetch(`/list/daejeon.json`);
 
       if (!response.ok) {
@@ -88,6 +87,12 @@ btn.addEventListener('click', async () => {
       }
 
       const data = await response.json();
+
+      if (!data || !data.locations || !Array.isArray(data.locations)) {
+        throw new Error('서버에서 올바른 데이터를 로드하지 못했습니다.');
+      }
+
+      console.log('Data from server:', data); // 추가: 서버에서 받은 데이터 출력
       displayLocations(data.locations);
     } catch (error) {
       console.error('데이터 로드 중 오류가 발생했습니다:', error);
@@ -95,35 +100,40 @@ btn.addEventListener('click', async () => {
     }
   }
 
-  // 장소 데이터 표시 함수
+  //* 장소 데이터 표시 함수
   function displayLocations(locations) {
-    // 구 버튼 지우고 그 안에 리스트 띄움
+    console.log('Displaying locations:', locations);
+    //* 구 버튼 지우고 그 안에 리스트 띄움
     guDiv.innerHTML = '';
 
     const locationList = document.createElement('ul');
     locationList.className = 'location-list';
 
-    // 추가된 부분: locations가 정의되어 있고 배열인지 확인
     if (locations && Array.isArray(locations)) {
-      console.log(locations); // 확인을 위한 로그 추가
+      console.log('Displaying locations:', locations);
       locations.forEach((location) => {
         const listItem = document.createElement('li');
 
+        //* json에서 이미지 불러오기
         const image = document.createElement('img');
         image.src = location.image;
         image.alt = location.name;
         image.style.width = '15vw';
         listItem.appendChild(image);
 
+        //* 가게 이름 불러오기
         const name = document.createElement('p');
         name.textContent = `이름: ${location.name}`;
         listItem.appendChild(name);
 
+        //* 주소 불러오기
         const address = document.createElement('p');
         address.textContent = `주소: ${location.address}`;
         listItem.appendChild(address);
 
+        //* 리스트를 클릭하면 좌표로 이동한다.
         listItem.addEventListener('click', () => {
+          console.log('ListItem clicked:', location);
           const latitude = location.latitude;
           const longitude = location.longitude;
           const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
@@ -140,6 +150,7 @@ btn.addEventListener('click', async () => {
       });
     }
 
+    //* 구 버튼 생성 및 스타일 지정
     guDiv.appendChild(locationList);
     locationList.style.overflowY = 'auto';
     locationList.style.maxHeight = '600px';
