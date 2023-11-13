@@ -40,8 +40,10 @@ guDiv.style.alignItems = 'center';
 guDiv.style.flexDirection = 'column';
 
 console.log(btn);
+// btn 버튼 이벤트 리스너
 btn.addEventListener('click', async () => {
   // 대전, 광주 버튼 생성
+  console.log('click');
   const daejeonButton = createStyledButton('대전', async () => {
     try {
       await toggleButtons('대전');
@@ -74,90 +76,82 @@ btn.addEventListener('click', async () => {
         guDiv.appendChild(guButton);
       });
     }
-  }
 
-  async function loadDistrictData(city, guName) {
-    try {
-      const response = await fetch(`/list/daejeon.json`);
+    async function loadDistrictData(city, guName) {
+      try {
+        const response = await fetch(`/list/daejeon.json`);
 
-      if (!response.ok) {
-        throw new Error(
-          `서버 응답 오류: ${response.status} ${response.statusText}`
-        );
+        if (!response.ok) {
+          throw new Error(
+            `서버 응답 오류: ${response.status} ${response.statusText}`
+          );
+        }
+
+        const data = await response.json();
+
+        if (!data || !data.locations || !Array.isArray(data.locations)) {
+          throw new Error('서버에서 올바른 데이터를 로드하지 못했습니다.');
+        }
+
+        console.log('Data from server:', data);
+        displayLocations(data.locations);
+      } catch (error) {
+        console.error('데이터 로드 중 오류가 발생했습니다:', error);
+        throw new Error('데이터 로드 중 오류가 발생했습니다.');
       }
-
-      const data = await response.json();
-
-      if (!data || !data.locations || !Array.isArray(data.locations)) {
-        throw new Error('서버에서 올바른 데이터를 로드하지 못했습니다.');
-      }
-
-      console.log('Data from server:', data); // 추가: 서버에서 받은 데이터 출력
-      displayLocations(data.locations);
-    } catch (error) {
-      console.error('데이터 로드 중 오류가 발생했습니다:', error);
-      throw new Error('데이터 로드 중 오류가 발생했습니다.');
     }
-  }
 
-  //* 장소 데이터 표시 함수
-  function displayLocations(locations) {
-    console.log('Displaying locations:', locations);
-    //* 구 버튼 지우고 그 안에 리스트 띄움
-    guDiv.innerHTML = '';
-
-    const locationList = document.createElement('ul');
-    locationList.className = 'location-list';
-
-    if (locations && Array.isArray(locations)) {
+    function displayLocations(locations) {
       console.log('Displaying locations:', locations);
-      locations.forEach((location) => {
-        const listItem = document.createElement('li');
+      guDiv.innerHTML = '';
 
-        //* json에서 이미지 불러오기
-        const image = document.createElement('img');
-        image.src = location.image;
-        image.alt = location.name;
-        image.style.width = '15vw';
-        listItem.appendChild(image);
+      const locationList = document.createElement('ul');
+      locationList.className = 'location-list';
 
-        //* 가게 이름 불러오기
-        const name = document.createElement('p');
-        name.textContent = `이름: ${location.name}`;
-        listItem.appendChild(name);
+      if (locations && Array.isArray(locations)) {
+        console.log('Displaying locations:', locations);
+        locations.forEach((location) => {
+          const listItem = document.createElement('li');
 
-        //* 주소 불러오기
-        const address = document.createElement('p');
-        address.textContent = `주소: ${location.address}`;
-        listItem.appendChild(address);
+          const image = document.createElement('img');
+          image.src = location.image;
+          image.alt = location.name;
+          image.style.width = '15vw';
+          listItem.appendChild(image);
 
-        //* 리스트를 클릭하면 좌표로 이동한다.
-        listItem.addEventListener('click', () => {
-          console.log('ListItem clicked:', location);
-          const latitude = location.latitude;
-          const longitude = location.longitude;
-          const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-          map.setCenter(daejeonLocation);
-          marker.setPosition(daejeonLocation);
+          const name = document.createElement('p');
+          name.textContent = `이름: ${location.name}`;
+          listItem.appendChild(name);
+
+          const address = document.createElement('p');
+          address.textContent = `주소: ${location.address}`;
+          listItem.appendChild(address);
+
+          listItem.addEventListener('click', () => {
+            console.log('ListItem clicked:', location);
+            const latitude = location.latitude;
+            const longitude = location.longitude;
+            const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
+            map.setCenter(daejeonLocation);
+            marker.setPosition(daejeonLocation);
+          });
+
+          const description = document.createElement('p');
+          description.textContent = `설명: ${location.description}`;
+          listItem.appendChild(description);
+
+          locationList.appendChild(listItem);
+          listItem.style.width = '20vw';
         });
+      }
 
-        const description = document.createElement('p');
-        description.textContent = `설명: ${location.description}`;
-        listItem.appendChild(description);
-
-        locationList.appendChild(listItem);
-        listItem.style.width = '20vw';
-      });
+      guDiv.appendChild(locationList);
+      locationList.style.overflowY = 'auto';
+      locationList.style.maxHeight = '600px';
+      locationList.style.width = '25vw';
     }
 
-    //* 구 버튼 생성 및 스타일 지정
-    guDiv.appendChild(locationList);
-    locationList.style.overflowY = 'auto';
-    locationList.style.maxHeight = '600px';
-    locationList.style.width = '25vw';
+    button.appendChild(daejeonButton);
+    button.appendChild(gwangjuButton);
   }
-
-  // 대전, 광주 버튼을 guDiv에 추가
-  button.appendChild(daejeonButton);
-  button.appendChild(gwangjuButton);
 });
