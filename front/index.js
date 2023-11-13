@@ -42,8 +42,9 @@ guDiv.style.flexDirection = 'column';
 console.log(btn);
 // btn 버튼 이벤트 리스너
 btn.addEventListener('click', async () => {
+  console.log('btn 버튼 클릭됨'); // 버튼 클릭 로그 확인
+
   // 대전, 광주 버튼 생성
-  console.log('click');
   const daejeonButton = createStyledButton('대전', async () => {
     try {
       await toggleButtons('대전');
