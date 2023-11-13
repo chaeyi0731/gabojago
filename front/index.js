@@ -1,14 +1,14 @@
-var mapOptions = {
+const mapOptions = {
   center: new naver.maps.LatLng(36.3503409, 127.3848208),
   zoom: 20, // 지도 확대 레벨을 조정하세요
 };
 
-var map = new naver.maps.Map('map', mapOptions);
+const map = new naver.maps.Map('map', mapOptions);
 
-var HOME_PATH = window.HOME_PATH || '.';
-var position = new naver.maps.LatLng(36.3503409, 127.3848208);
+const HOME_PATH = window.HOME_PATH || '.';
+const position = new naver.maps.LatLng(36.3503409, 127.3848208);
 
-var markerOptions = {
+const markerOptions = {
   position: position.destinationPoint(90, 15),
   map: map,
   icon: {
@@ -27,7 +27,7 @@ function createStyledButton(text, clickHandler) {
   return button;
 }
 
-var marker = new naver.maps.Marker(markerOptions);
+const marker = new naver.maps.Marker(markerOptions);
 
 const button = document.getElementsByClassName('button')[0];
 const maps = document.getElementsByClassName('mapandbutton')[0];
