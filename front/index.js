@@ -69,9 +69,9 @@ btn.addEventListener('click', async () => {
   }
 
   // 데이터 로드 함수
-  async function loadDistrictData(district) {
+  async function loadDistrictData() {
     try {
-      const response = await fetch('/list/daejeon.json');
+      const response = await fetch(`/list/daejeon.json`);
 
       if (!response.ok) {
         throw new Error(
@@ -89,6 +89,7 @@ btn.addEventListener('click', async () => {
 
   // 장소 데이터 표시 함수
   function displayLocations(locations) {
+    // 구 버튼 지우고 그 안에 리스트 띄움
     guDiv.innerHTML = '';
 
     const locationList = document.createElement('ul');
@@ -96,6 +97,7 @@ btn.addEventListener('click', async () => {
 
     // 추가된 부분: locations가 정의되어 있고 배열인지 확인
     if (locations && Array.isArray(locations)) {
+      console.log(locations); // 확인을 위한 로그 추가
       locations.forEach((location) => {
         const listItem = document.createElement('li');
 
