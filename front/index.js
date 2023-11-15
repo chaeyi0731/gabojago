@@ -237,3 +237,13 @@ fetch('/list/gwangju.json')
   .catch((error) =>
     console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error)
   );
+
+// 구 버튼 생성 함수
+function createGuButton(guName) {
+  const guButton = document.createElement('button');
+  guDiv.appendChild(guButton);
+  guButton.classList.add(guName.toLowerCase()); // 클래스 이름을 구 이름으로 지정
+  guButton.textContent = guName;
+  guButton.style.color = 'white';
+  return guButton;
+}
