@@ -232,7 +232,6 @@ fetch('/list/gwangju.json')
         // addGuEventListener 함수를 호출하지 않습니다. 이미 createGuButton 내에서 호출하도록 변경했습니다.
       });
     });
-    // 함수가 여기에 정의되어 있던 부분은 삭제
   })
   .catch((error) =>
     console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error)
@@ -245,5 +244,26 @@ function createGuButton(guName) {
   guButton.classList.add(guName.toLowerCase()); // 클래스 이름을 구 이름으로 지정
   guButton.textContent = guName;
   guButton.style.color = 'white';
+  if (!guButton.hasEventListener) {
+    guButton.hasEventListener = true;
+    guButton.addEventListener('click', () => {
+      // 여기에서는 data를 참조하지 않도록 주의하세요.
+      const guData = data[`${currentArea}/${guName}`];
+      guDiv.innerHTML = '';
+
+      const locationList = document.createElement('ul');
+      locationList.className = 'location-list';
+
+      guData.locations.forEach((location) => {
+        // ... (이하 생략)
+      });
+
+      guDiv.appendChild(locationList);
+      locationList.style.overflowY = 'auto';
+      locationList.style.maxHeight = '600px';
+      locationList.style.width = '25vw';
+    });
+  }
+
   return guButton;
 }
