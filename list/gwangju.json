@@ -10,5 +10,17 @@
         "longitude": 126.9129497
       }
     ]
+  },
+  "광주광역시/광산구": {
+    "locations": [
+      {
+        "name": "주디마리",
+        "address": "광주 북구 우치로 86 지하1층",
+        "description": "문익점 푸딩으로 유명한 곳, 사장님께서 일본 살면서 얻은 유일무이 수제레시피",
+        "image": "https://ldb-phinf.pstatic.net/20230428_237/168265268521124r2s_JPEG/l7kiLCqdCVfhCxAQaF9MsyaAUhWWfwjG7OgtU1Uw53hC5cvBqPzW0Ksv2GnOlg6F.jpg",
+        "latitude": 35.1750829,
+        "longitude": 126.9129497
+      }
+    ]
   }
 }
