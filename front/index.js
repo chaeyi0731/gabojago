@@ -140,6 +140,86 @@ daejeonButton.addEventListener('click', () => {
       console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error)
     );
 });
+//* 광주 클릭시 정보 제공
+// 광주 버튼 클릭 시 동작
+gwangjuButton.addEventListener('click', () => {
+  guDiv.style.display = 'flex';
+  guDiv.style.alignItems = 'center';
+  guDiv.style.flexDirection = 'column';
+
+  // 광주의 각 구 이름 배열
+  const gwangjuGuNames = ['광산구', '남구', '동구', '서구', '북구'];
+
+  // 각 구 버튼 생성과 이벤트 리스너 추가
+  gwangjuGuNames.forEach((guName) => {
+    const guButton = createGuButton(guName);
+    addGuEventListener(guButton, `광주광역시/${guName}`);
+  });
+});
+
+// JSON 데이터 가져오기
+fetch('/list/jwangju.json')
+  .then((response) => response.json())
+  .then((data) => {
+    function addGuEventListener(guButton, dataKey) {
+      guButton.addEventListener('click', () => {
+        // 여기에서는 data를 참조하지 않도록 주의하세요.
+        const guData = data[dataKey];
+        guDiv.innerHTML = '';
+
+        const locationList = document.createElement('ul');
+        locationList.className = 'location-list';
+
+        guData.locations.forEach((location) => {
+          const listItem = document.createElement('li');
+
+          // 이미지 추가
+          const image = document.createElement('img');
+          image.src = location.image;
+          image.alt = location.name;
+          image.style.width = '15vw';
+          listItem.appendChild(image);
+
+          // 이름 추가
+          const name = document.createElement('p');
+          name.textContent = `이름: ${location.name}`;
+          listItem.appendChild(name);
+
+          // 주소 추가
+          const address = document.createElement('p');
+          address.textContent = `주소: ${location.address}`;
+          listItem.appendChild(address);
+
+          listItem.addEventListener('click', function () {
+            // 클릭한 장소의 위도와 경도를 가져옴
+            const latitude = location.latitude;
+            const longitude = location.longitude;
+
+            // 지도를 해당 위치로 이동
+            const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
+            map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+            marker.setPosition(daejeonLocation);
+          });
+
+          // 설명 추가
+          const description = document.createElement('p');
+          description.textContent = `설명: ${location.description}`;
+          listItem.appendChild(description);
+
+          locationList.appendChild(listItem);
+          listItem.style.width = '20vw';
+        });
+
+        guDiv.appendChild(locationList);
+        locationList.style.overflowY = 'auto';
+        locationList.style.maxHeight = '600px';
+        locationList.style.width = '25vw';
+      });
+    }
+  })
+  .catch((error) =>
+    console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error)
+  );
 
 // 구 버튼 생성 함수
 function createGuButton(guName) {
