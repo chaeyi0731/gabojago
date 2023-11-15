@@ -158,7 +158,7 @@ gwangjuButton.addEventListener('click', () => {
 });
 
 // JSON 데이터 가져오기
-fetch('/list/jwangju.json')
+fetch('/list/gwangju.json')
   .then((response) => response.json())
   .then((data) => {
     function addGuEventListener(guButton, dataKey) {
