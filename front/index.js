@@ -140,7 +140,79 @@ daejeonButton.addEventListener('click', () => {
       console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error)
     );
 });
-//* 광주 클릭시 정보 제공
+
+// 구 버튼 생성 함수
+function createGuButton(guName) {
+  const guButton = document.createElement('button');
+  guDiv.appendChild(guButton);
+  guButton.classList.add(guName.toLowerCase()); // 클래스 이름을 구 이름으로 지정
+  guButton.textContent = guName;
+  guButton.style.color = 'white';
+
+  // 이 부분에서 addGuEventListener 함수를 호출하도록 변경
+  addGuEventListener(guButton, `광주광역시/${guName}`);
+
+  return guButton;
+}
+
+// addGuEventListener 함수를 이제 여기서 정의
+function addGuEventListener(guButton, dataKey) {
+  guButton.addEventListener('click', () => {
+    // 여기에서는 data를 참조하지 않도록 주의하세요.
+    const guData = data[dataKey];
+    guDiv.innerHTML = '';
+
+    const locationList = document.createElement('ul');
+    locationList.className = 'location-list';
+
+    guData.locations.forEach((location) => {
+      const listItem = document.createElement('li');
+
+      // 이미지 추가
+      const image = document.createElement('img');
+      image.src = location.image;
+      image.alt = location.name;
+      image.style.width = '15vw';
+      listItem.appendChild(image);
+
+      // 이름 추가
+      const name = document.createElement('p');
+      name.textContent = `이름: ${location.name}`;
+      listItem.appendChild(name);
+
+      // 주소 추가
+      const address = document.createElement('p');
+      address.textContent = `주소: ${location.address}`;
+      listItem.appendChild(address);
+
+      listItem.addEventListener('click', function () {
+        // 클릭한 장소의 위도와 경도를 가져옴
+        const latitude = location.latitude;
+        const longitude = location.longitude;
+
+        // 지도를 해당 위치로 이동
+        const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
+        map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+        marker.setPosition(daejeonLocation);
+      });
+
+      // 설명 추가
+      const description = document.createElement('p');
+      description.textContent = `설명: ${location.description}`;
+      listItem.appendChild(description);
+
+      locationList.appendChild(listItem);
+      listItem.style.width = '20vw';
+    });
+
+    guDiv.appendChild(locationList);
+    locationList.style.overflowY = 'auto';
+    locationList.style.maxHeight = '600px';
+    locationList.style.width = '25vw';
+  });
+}
+
+// 광주 클릭시 정보 제공
 // 광주 버튼 클릭 시 동작
 gwangjuButton.addEventListener('click', () => {
   guDiv.style.display = 'flex';
@@ -153,7 +225,7 @@ gwangjuButton.addEventListener('click', () => {
   // 각 구 버튼 생성과 이벤트 리스너 추가
   gwangjuGuNames.forEach((guName) => {
     const guButton = createGuButton(guName);
-    addGuEventListener(guButton, `광주광역시/${guName}`);
+    // addGuEventListener 함수를 호출하지 않습니다. 이미 createGuButton 내에서 호출하도록 변경했습니다.
   });
 });
 
@@ -161,72 +233,8 @@ gwangjuButton.addEventListener('click', () => {
 fetch('/list/gwangju.json')
   .then((response) => response.json())
   .then((data) => {
-    function addGuEventListener(guButton, dataKey) {
-      guButton.addEventListener('click', () => {
-        // 여기에서는 data를 참조하지 않도록 주의하세요.
-        const guData = data[dataKey];
-        guDiv.innerHTML = '';
-
-        const locationList = document.createElement('ul');
-        locationList.className = 'location-list';
-
-        guData.locations.forEach((location) => {
-          const listItem = document.createElement('li');
-
-          // 이미지 추가
-          const image = document.createElement('img');
-          image.src = location.image;
-          image.alt = location.name;
-          image.style.width = '15vw';
-          listItem.appendChild(image);
-
-          // 이름 추가
-          const name = document.createElement('p');
-          name.textContent = `이름: ${location.name}`;
-          listItem.appendChild(name);
-
-          // 주소 추가
-          const address = document.createElement('p');
-          address.textContent = `주소: ${location.address}`;
-          listItem.appendChild(address);
-
-          listItem.addEventListener('click', function () {
-            // 클릭한 장소의 위도와 경도를 가져옴
-            const latitude = location.latitude;
-            const longitude = location.longitude;
-
-            // 지도를 해당 위치로 이동
-            const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
-            map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-            marker.setPosition(daejeonLocation);
-          });
-
-          // 설명 추가
-          const description = document.createElement('p');
-          description.textContent = `설명: ${location.description}`;
-          listItem.appendChild(description);
-
-          locationList.appendChild(listItem);
-          listItem.style.width = '20vw';
-        });
-
-        guDiv.appendChild(locationList);
-        locationList.style.overflowY = 'auto';
-        locationList.style.maxHeight = '600px';
-        locationList.style.width = '25vw';
-      });
-    }
+    // 함수가 여기에 정의되어 있던 부분은 삭제
   })
   .catch((error) =>
     console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error)
   );
-
-// 구 버튼 생성 함수
-function createGuButton(guName) {
-  const guButton = document.createElement('button');
-  guDiv.appendChild(guButton);
-  guButton.classList.add(guName.toLowerCase()); // 클래스 이름을 구 이름으로 지정
-  guButton.textContent = guName;
-  guButton.style.color = 'white';
-  return guButton;
-}
