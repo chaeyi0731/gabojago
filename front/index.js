@@ -24,6 +24,7 @@ const marker = new naver.maps.Marker(markerOptions);
 
 const button = document.getElementsByClassName('button')[0];
 const maps = document.getElementsByClassName('mapandbutton')[0];
+const createdGuButtons = new Set();
 
 // "btn" 버튼 엘리먼트를 가져옵니다.
 const btn = document.getElementById('btn');
@@ -76,64 +77,68 @@ daejeonButton.addEventListener('click', () => {
         const guButton = createGuButton(guName);
         addGuEventListener(guButton, `대전광역시/${guName}`);
       });
+
       // 이벤트 리스너 함수
       function addGuEventListener(guButton, dataKey) {
-        guButton.addEventListener('click', () => {
-          // 여기에서는 data를 참조하지 않도록 주의하세요.
-          const guData = data[dataKey];
-          guDiv.innerHTML = '';
+        if (!createdGuButtons.has(guButton)) {
+          createdGuButtons.add(guButton);
+          guButton.addEventListener('click', () => {
+            // 여기에서는 data를 참조하지 않도록 주의하세요.
+            const guData = data[dataKey];
+            guDiv.innerHTML = '';
 
-          const locationList = document.createElement('ul');
-          locationList.className = 'location-list';
+            const locationList = document.createElement('ul');
+            locationList.className = 'location-list';
 
-          guData.locations.forEach((location) => {
-            const listItem = document.createElement('li');
+            guData.locations.forEach((location) => {
+              const listItem = document.createElement('li');
 
-            // 이미지 추가
-            const image = document.createElement('img');
-            image.src = location.image;
-            image.alt = location.name;
-            image.style.width = '15vw';
-            listItem.appendChild(image);
+              // 이미지 추가
+              const image = document.createElement('img');
+              image.src = location.image;
+              image.alt = location.name;
+              image.style.width = '15vw';
+              listItem.appendChild(image);
 
-            // 이름 추가
-            const name = document.createElement('p');
-            name.textContent = `이름: ${location.name}`;
-            listItem.appendChild(name);
+              // 이름 추가
+              const name = document.createElement('p');
+              name.textContent = `이름: ${location.name}`;
+              listItem.appendChild(name);
 
-            // 주소 추가
-            const address = document.createElement('p');
-            address.textContent = `주소: ${location.address}`;
-            listItem.appendChild(address);
+              // 주소 추가
+              const address = document.createElement('p');
+              address.textContent = `주소: ${location.address}`;
+              listItem.appendChild(address);
 
-            listItem.addEventListener('click', function () {
-              // 클릭한 장소의 위도와 경도를 가져옴
-              const latitude = location.latitude;
-              const longitude = location.longitude;
+              listItem.addEventListener('click', function () {
+                // 클릭한 장소의 위도와 경도를 가져옴
+                const latitude = location.latitude;
+                const longitude = location.longitude;
 
-              // 지도를 해당 위치로 이동
-              const daejeonLocation = new naver.maps.LatLng(
-                latitude,
-                longitude
-              );
-              map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
-              marker.setPosition(daejeonLocation);
+                // 지도를 해당 위치로 이동
+                const daejeonLocation = new naver.maps.LatLng(
+                  latitude,
+                  longitude
+                );
+                map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+                marker.setPosition(daejeonLocation);
+              });
+
+              // 설명 추가
+              const description = document.createElement('p');
+              description.textContent = `설명: ${location.description}`;
+              listItem.appendChild(description);
+
+              locationList.appendChild(listItem);
+              listItem.style.width = '20vw';
             });
 
-            // 설명 추가
-            const description = document.createElement('p');
-            description.textContent = `설명: ${location.description}`;
-            listItem.appendChild(description);
-
-            locationList.appendChild(listItem);
-            listItem.style.width = '20vw';
+            guDiv.appendChild(locationList);
+            locationList.style.overflowY = 'auto';
+            locationList.style.maxHeight = '600px';
+            locationList.style.width = '25vw';
           });
-
-          guDiv.appendChild(locationList);
-          locationList.style.overflowY = 'auto';
-          locationList.style.maxHeight = '600px';
-          locationList.style.width = '25vw';
-        });
+        }
       }
     })
     .catch((error) =>

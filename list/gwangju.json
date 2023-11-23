@@ -26,24 +26,40 @@
   "광주광역시/동구": {
     "locations": [
       {
-        "name": "주디마리",
-        "address": "광주 북구 우치로 86 지하1층",
-        "description": "문익점 푸딩으로 유명한 곳, 사장님께서 일본 살면서 얻은 유일무이 수제레시피",
-        "image": "https://ldb-phinf.pstatic.net/20230428_237/168265268521124r2s_JPEG/l7kiLCqdCVfhCxAQaF9MsyaAUhWWfwjG7OgtU1Uw53hC5cvBqPzW0Ksv2GnOlg6F.jpg",
-        "latitude": 35.1750829,
-        "longitude": 126.9129497
+        "name": "행복담",
+        "address": "광주 동구 서석로85번길 2",
+        "description": "특이한 국밥인 크림순대국밥을 먹어 볼 수 있는 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_295%2F1696651541060kJ1VA_JPEG%2FIMG_4596.jpeg",
+        "latitude": 35.1496343,
+        "longitude": 126.9205976
+      },
+      {
+        "name": "궁전제과",
+        "address": "광주 동구 충장로 93-6",
+        "description": "광주에서 제일 유명한 빵집, 대전에 성심당이있다면 광주엔 궁전제과가 있다. 나비파이가 맛있는 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160705_277%2F1467707692587EiXa9_JPEG%2F_64.jpg",
+        "latitude": 35.1476962,
+        "longitude": 126.9175718
+      },
+      {
+        "name": "육층집",
+        "address": "광주 동구 문화전당로35번길 16-4 오렌지타운 6층 육층집",
+        "description": "고기의 질이 좋고 후식 볶음밥을 되게 귀엽게 볶아주는 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211104_16%2F1635982625098tJRaq_JPEG%2F93gjRvcTMuOtl_h41WjwpuPi.jpg",
+        "latitude": 35.1455326,
+        "longitude": 126.9175809
       }
     ]
   },
   "광주광역시/남구": {
     "locations": [
       {
-        "name": "주디마리",
-        "address": "광주 북구 우치로 86 지하1층",
-        "description": "문익점 푸딩으로 유명한 곳, 사장님께서 일본 살면서 얻은 유일무이 수제레시피",
-        "image": "https://ldb-phinf.pstatic.net/20230428_237/168265268521124r2s_JPEG/l7kiLCqdCVfhCxAQaF9MsyaAUhWWfwjG7OgtU1Uw53hC5cvBqPzW0Ksv2GnOlg6F.jpg",
-        "latitude": 35.1750829,
-        "longitude": 126.9129497
+        "name": "의령소바 광주진월점",
+        "address": "광주 남구 금당로 5",
+        "description": "광주에서 소바가 진짜 맛있는 곳 개인적으로 소바보다는 메밀 전병이 엄청 맛있었다!",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200503_41%2F1588469737162pLj9y_JPEG%2FUhAtKck676tt2A447xy4pbrY.jpg",
+        "latitude": 35.1178319,
+        "longitude": 126.8972824
       }
     ]
   },
