@@ -215,6 +215,13 @@ fetch('/list/gwangju.json')
           description.textContent = `설명: ${location.description}`;
           listItem.appendChild(description);
 
+          //전화번호
+
+          //전화번호
+          const StoreNumber = document.createElement('p');
+          StoreNumber.textContent = `전화번호 : ${location.StoreNumber}`;
+          listItem.appendChild(StoreNumber);
+
           locationList.appendChild(listItem);
           listItem.style.width = '20vw';
         });

@@ -7,7 +7,8 @@
         "description": "문익점 푸딩으로 유명한 곳, 사장님께서 일본 살면서 얻은 유일무이 수제레시피",
         "image": "https://ldb-phinf.pstatic.net/20230428_237/168265268521124r2s_JPEG/l7kiLCqdCVfhCxAQaF9MsyaAUhWWfwjG7OgtU1Uw53hC5cvBqPzW0Ksv2GnOlg6F.jpg",
         "latitude": 35.1750829,
-        "longitude": 126.9129497
+        "longitude": 126.9129497,
+        "StoreNumber": "062-267-1001"
       },
       {
         "name": "광주 패밀리랜드",
@@ -15,7 +16,8 @@
         "description": "동물들의 관리가 잘 되어 있고 즐길 거리 볼 거리가 많았던 곳 ",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220116_6%2F1642321575143TGYgA_JPEG%2FIMG_2413.jpg",
         "latitude": 35.2235333,
-        "longitude": 126.8940666
+        "longitude": 126.8940666,
+        "StoreNumber": "062-607-8000"
       },
       {
         "name": "광주 패밀리랜드 카라반 캠핑장",
@@ -23,7 +25,8 @@
         "description": "패밀리랜드의 또 다른 감성 캠핑까지 즐길 수 있는 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200531_160%2F1590911264750xCHw2_JPEG%2FeRfyD-Hps6wApstgpQkY9wh-.jpg",
         "latitude": 35.2235333,
-        "longitude": 126.8940666
+        "longitude": 126.8940666,
+        "StoreNumber": "062-607-8088"
       }
     ]
   },
@@ -35,7 +38,8 @@
         "description": "떡갈비 거리에 있는 떡갈비 집 고기의 잡내가 없고 깔끔한 집",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20180819_56%2F1534680720925TYXwy_JPEG%2Fnxdrl0x1EZCHPWgcdInleL_R.jpg",
         "latitude": 35.1399099,
-        "longitude": 126.7943898
+        "longitude": 126.7943898,
+        "StoreNumber": "0507-1397-6673"
       }
     ]
   },
@@ -47,7 +51,8 @@
         "description": "특이한 국밥인 크림순대국밥을 먹어 볼 수 있는 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231007_295%2F1696651541060kJ1VA_JPEG%2FIMG_4596.jpeg",
         "latitude": 35.1496343,
-        "longitude": 126.9205976
+        "longitude": 126.9205976,
+        "StoreNumber": "062-233-4744"
       },
       {
         "name": "궁전제과",
@@ -55,7 +60,8 @@
         "description": "광주에서 제일 유명한 빵집, 대전에 성심당이있다면 광주엔 궁전제과가 있다. 나비파이가 맛있는 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160705_277%2F1467707692587EiXa9_JPEG%2F_64.jpg",
         "latitude": 35.1476962,
-        "longitude": 126.9175718
+        "longitude": 126.9175718,
+        "StoreNumber": "062-222-3477"
       },
       {
         "name": "육층집",
@@ -63,7 +69,8 @@
         "description": "고기의 질이 좋고 후식 볶음밥을 되게 귀엽게 볶아주는 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20211104_16%2F1635982625098tJRaq_JPEG%2F93gjRvcTMuOtl_h41WjwpuPi.jpg",
         "latitude": 35.1455326,
-        "longitude": 126.9175809
+        "longitude": 126.9175809,
+        "StoreNumber": "062-222-6679"
       },
       {
         "name": "쿠로시로",
@@ -71,7 +78,8 @@
         "description": "김태열이 10개월전에 배타기 전 먹었던 마지막 만찬",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220507_90%2F1651918718855bR7Kd_JPEG%2F%25BD%25C3%25BF%25C0%25B6%25F3%25B8%25E0.jpg",
         "latitude": 35.1487095,
-        "longitude": 126.9184092
+        "longitude": 126.9184092,
+        "StoreNumber": "0507-1327-1710"
       },
       {
         "name": "달곰식당",
@@ -79,7 +87,8 @@
         "description": "맛잘알 지인이 알려준 곳 플레이팅이 너무 예쁘다",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230522_151%2F16847630529793xqKH_JPEG%2F1684763015132.jpg",
         "latitude": 35.1483995,
-        "longitude": 126.9262866
+        "longitude": 126.9262866,
+        "StoreNumber": "062-222-5777"
       }
     ]
   },
@@ -91,7 +100,8 @@
         "description": "광주에서 소바가 진짜 맛있는 곳 개인적으로 소바보다는 메밀 전병이 엄청 맛있었다!",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200503_41%2F1588469737162pLj9y_JPEG%2FUhAtKck676tt2A447xy4pbrY.jpg",
         "latitude": 35.1178319,
-        "longitude": 126.8972824
+        "longitude": 126.8972824,
+        "StoreNumber": "062-651-0084"
       },
       {
         "name": "광주 오리날개튀김",
@@ -99,7 +109,8 @@
         "description": "이색? 특이?한 음식",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210113_10%2F16105348958994wVE3_JPEG%2FHuu8KfMCOPNzI5_EM9k9PAgY.JPG.jpg",
         "latitude": 35.138905,
-        "longitude": 126.9204817
+        "longitude": 126.9204817,
+        "StoreNumber": "062-651-0084"
       }
     ]
   },
@@ -111,7 +122,8 @@
         "description": "주차장이 넓어 주차 하기 편하고 매장이 깔끔한 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20151113_66%2F14473930406699LRSy_JPEG%2F167063546739167_0.jpg",
         "latitude": 35.1510674,
-        "longitude": 126.8366771
+        "longitude": 126.8366771,
+        "StoreNumber": "062-944-1489"
       },
       {
         "name": "부엌간",
@@ -119,7 +131,8 @@
         "description": "매장 분위가 좋고 뇨끼가 너무 맛있었던 곳",
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230622_145%2F1687395588813L8kHN_JPEG%2F1C8D0B0B-EB85-4DD0-9EEE-041EC7D4AC48.jpeg",
         "latitude": 35.1295005,
-        "longitude": 126.8476946
+        "longitude": 126.8476946,
+        "StoreNumber": "062-385-8800"
       }
     ]
   }
