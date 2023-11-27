@@ -14,12 +14,12 @@
   "광주광역시/광산구": {
     "locations": [
       {
-        "name": "주디마리",
-        "address": "광주 북구 우치로 86 지하1층",
-        "description": "문익점 푸딩으로 유명한 곳, 사장님께서 일본 살면서 얻은 유일무이 수제레시피",
-        "image": "https://ldb-phinf.pstatic.net/20230428_237/168265268521124r2s_JPEG/l7kiLCqdCVfhCxAQaF9MsyaAUhWWfwjG7OgtU1Uw53hC5cvBqPzW0Ksv2GnOlg6F.jpg",
-        "latitude": 35.1750829,
-        "longitude": 126.9129497
+        "name": "빛고을떡갈비",
+        "address": "광주 광산구 광산로29번길 14 송정동831-21",
+        "description": "떡갈비 거리에 있는 떡갈비 집 고기의 잡내가 없고 깔끔한 집",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20180819_56%2F1534680720925TYXwy_JPEG%2Fnxdrl0x1EZCHPWgcdInleL_R.jpg",
+        "latitude": 35.1399099,
+        "longitude": 126.7943898
       }
     ]
   },
@@ -60,6 +60,14 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200503_41%2F1588469737162pLj9y_JPEG%2FUhAtKck676tt2A447xy4pbrY.jpg",
         "latitude": 35.1178319,
         "longitude": 126.8972824
+      },
+      {
+        "name": "광주 오리날개튀김",
+        "address": "광주 동구 제봉로17번길 24 1층 광주오리날개튀김",
+        "description": "이색? 특이?한 음식",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210113_10%2F16105348958994wVE3_JPEG%2FHuu8KfMCOPNzI5_EM9k9PAgY.JPG.jpg",
+        "latitude": 35.138905,
+        "longitude": 126.9204817
       }
     ]
   },
