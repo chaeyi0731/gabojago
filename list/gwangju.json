@@ -8,6 +8,22 @@
         "image": "https://ldb-phinf.pstatic.net/20230428_237/168265268521124r2s_JPEG/l7kiLCqdCVfhCxAQaF9MsyaAUhWWfwjG7OgtU1Uw53hC5cvBqPzW0Ksv2GnOlg6F.jpg",
         "latitude": 35.1750829,
         "longitude": 126.9129497
+      },
+      {
+        "name": "광주 패밀리랜드",
+        "address": "광주 북구 우치로 677 광주패밀리랜드",
+        "description": "동물들의 관리가 잘 되어 있고 즐길 거리 볼 거리가 많았던 곳 ",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220116_6%2F1642321575143TGYgA_JPEG%2FIMG_2413.jpg",
+        "latitude": 35.2235333,
+        "longitude": 126.8940666
+      },
+      {
+        "name": "광주 패밀리랜드 카라반 캠핑장",
+        "address": "광주 북구 우치로 677",
+        "description": "패밀리랜드의 또 다른 감성 캠핑까지 즐길 수 있는 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200531_160%2F1590911264750xCHw2_JPEG%2FeRfyD-Hps6wApstgpQkY9wh-.jpg",
+        "latitude": 35.2235333,
+        "longitude": 126.8940666
       }
     ]
   },
@@ -56,6 +72,14 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220507_90%2F1651918718855bR7Kd_JPEG%2F%25BD%25C3%25BF%25C0%25B6%25F3%25B8%25E0.jpg",
         "latitude": 35.1487095,
         "longitude": 126.9184092
+      },
+      {
+        "name": "달곰식당",
+        "address": "광주 동구 장동로43번길 9",
+        "description": "맛잘알 지인이 알려준 곳 플레이팅이 너무 예쁘다",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230522_151%2F16847630529793xqKH_JPEG%2F1684763015132.jpg",
+        "latitude": 35.1483995,
+        "longitude": 126.9262866
       }
     ]
   },
