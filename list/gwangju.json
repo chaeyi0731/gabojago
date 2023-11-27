@@ -82,12 +82,20 @@
   "광주광역시/서구": {
     "locations": [
       {
-        "name": "주디마리",
-        "address": "광주 북구 우치로 86 지하1층",
-        "description": "문익점 푸딩으로 유명한 곳, 사장님께서 일본 살면서 얻은 유일무이 수제레시피",
-        "image": "https://ldb-phinf.pstatic.net/20230428_237/168265268521124r2s_JPEG/l7kiLCqdCVfhCxAQaF9MsyaAUhWWfwjG7OgtU1Uw53hC5cvBqPzW0Ksv2GnOlg6F.jpg",
-        "latitude": 35.1750829,
-        "longitude": 126.9129497
+        "name": "나정상회",
+        "address": "광주 서구 상무자유로 24",
+        "description": "주차장이 넓어 주차 하기 편하고 매장이 깔끔한 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20151113_66%2F14473930406699LRSy_JPEG%2F167063546739167_0.jpg",
+        "latitude": 35.1510674,
+        "longitude": 126.8366771
+      },
+      {
+        "name": "부엌간",
+        "address": "광주 서구 서광주로 25 1층",
+        "description": "매장 분위가 좋고 뇨끼가 너무 맛있었던 곳",
+        "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230622_145%2F1687395588813L8kHN_JPEG%2F1C8D0B0B-EB85-4DD0-9EEE-041EC7D4AC48.jpeg",
+        "latitude": 35.1295005,
+        "longitude": 126.8476946
       }
     ]
   }
