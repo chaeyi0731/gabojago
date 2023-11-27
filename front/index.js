@@ -131,6 +131,11 @@ daejeonButton.addEventListener('click', () => {
 
               locationList.appendChild(listItem);
               listItem.style.width = '20vw';
+
+              //전화번호
+              const StoreNumber = document.createElement('p');
+              StoreNumber.textContent = `전화번호 : ${location.StoreNumber}`;
+              listItem.appendChild(StoreNumber);
             });
 
             guDiv.appendChild(locationList);

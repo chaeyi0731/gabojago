@@ -8,7 +8,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221011_74%2F1665468641055ErX4p_JPEG%2F1665468173154.jpg",
         "latitude": 36.3305629,
         "longitude": 127.4227525,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요. 대신 전화번호를 남길게요. 0507-1406-2251 "
+        "StoreNumber": "0507-1406-2251"
       },
       {
         "name": "요우란",
@@ -17,7 +17,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190710_205%2F1562735173606WPERe_JPEG%2FMD35zgRNXDYZTj0hBL44PjZu.jpg",
         "latitude": 36.3268968,
         "longitude": 127.4188217,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요.0507-1361-2688"
+        "StoreNumber": "0507-1361-2688"
       },
       {
         "name": "한영식당",
@@ -26,7 +26,7 @@
         "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA5MjVfMzUg%2FMDAxNjY0MDg5MDkyNDI5.c_aCcIVzAk-GVkeh4a9Zjs_2PrbPR0fNuk-ZI125sAwg.2YOocbryq_q_ai_pCD4e8wM5Xd8S5rmYHpp0p070JTog.JPEG.loveporori111%2FKakaoTalk_20220925_145132759_03.jpg",
         "latitude": 36.3234206,
         "longitude": 127.4107681,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요.042-533-2644"
+        "StoreNumber": "042-533-2644"
       },
       {
         "name": "우리의오늘",
@@ -35,7 +35,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230112_113%2F1673496700205oeRdI_JPEG%2FScreenshot_20230112_130645_Gallery.jpg",
         "latitude": 36.3272634,
         "longitude": 127.4052244,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요.042-522-0102"
+        "StoreNumber": "042-522-0102"
       },
       {
         "name": "성심당",
@@ -44,7 +44,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220728_286%2F1658996686205cRrN7_PNG%2F%25B3%25D7%25C0%25CC%25B9%25F6%25BA%25BB%25C1%25A1_1_%25BB%25E7%25C0%25CC%25C1%25EE%25C1%25B6%25C1%25A4.png",
         "latitude": 36.3277298,
         "longitude": 127.4273109,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 1588-8069"
+        "StoreNumber": "1588-8069"
       },
       {
         "name": "오월드",
@@ -53,7 +53,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210409_107%2F1617931466585DfABI_JPEG%2F%25BD%25C3%25BC%25B3%25B9%25B0%25C0%25CC%25B9%25CC%25C1%25F61.jpg",
         "latitude": 36.2888608,
         "longitude": 127.397939,
-        "reservation": "https://map.naver.com/p/entry/place/11526052?lng=127.39795390000003&lat=36.288860800000016&placePath=%2Fbooking&entry=plt&c=15.00,0,0,0,dh"
+        "StoreNumber": "042-580-4820"
       },
       {
         "name": "은행동",
@@ -62,7 +62,7 @@
         "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDVfODgg%2FMDAxNjkzODc0OTc4NjQ4.wTng5sisGX8F6Mk88hul0VnNoqDktrlhs-L-ek0oUSkg.0xLaBsKzWz-dcsPyfdxqivddABvswQb4YjzBKksoiKcg.JPEG.pliokuj633%2FIMG_4547.JPG",
         "latitude": 36.3290864,
         "longitude": 127.4273184,
-        "reservation": "예약을 하는 곳이 아니에요"
+        "StoreNumber": "예약을 하는 곳이 아니에요"
       },
       {
         "name": "책과향기",
@@ -71,7 +71,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200101_239%2F1577855312881GE6Bu_JPEG%2Fi5OLuzx-eOfEIwusKqGoULdP.jpg",
         "latitude": 36.3280399,
         "longitude": 127.4241371,
-        "reservation": "https://map.naver.com/p/search/%EC%B1%85%EA%B3%BC%ED%96%A5%EA%B8%B0/place/1203671087?c=15.00,0,0,0,dh&placePath=%2Fbooking%3FbookingRedirectUrl%3Dhttps%25253A%25252F%25252Fm.booking.naver.com%25252Fbooking%25252F6%25252Fbizes%25252F209752%25253Ftheme%25253Dplace%252526service-target%25253Dmap-pc%252526entry%25253Dbmp"
+        "StoreNumber": "0507-1381-8445"
       },
       {
         "name": "대전 고봉민 김밥",
@@ -80,7 +80,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230502_110%2F1682990554239TUmxL_PNG%2F%25C4%25C1%25BC%25C1%25B7%25CE%25B0%25ED%25BA%25AF%25B0%25E6-1000x1500.png",
         "latitude": 36.3222413,
         "longitude": 127.42775,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요. 대신 전화번호를 남길게요. 042-242-5943"
+        "StoreNumber": "042-242-5943"
       },
       {
         "name": "대전 아쿠아리움",
@@ -89,7 +89,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210915_36%2F1631679015447KYpjO_JPEG%2Fbanner_x_%25282%2529.jpg",
         "latitude": 36.3100835,
         "longitude": 127.4210676,
-        "reservation": "https://map.naver.com/p/search/%EB%8C%80%EC%A0%84%EC%95%84%EC%BF%A0%EC%95%84%EB%A6%AC%EC%9B%80/place/37110041?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "StoreNumber": "042-580-4820"
       }
     ]
   },
@@ -102,7 +102,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210518_80%2F16212636345155mIcU_JPEG%2F7JI2qU3sIzYjnm66FeGulVB0.jpg",
         "latitude": 36.3884846,
         "longitude": 127.3516274,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요. 대신 전화번호를 남길게요. 042-825-1585"
+        "StoreNumber": "042-825-1585"
       },
       {
         "name": "달자네 뒷고기",
@@ -111,7 +111,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191116_147%2F1573910146754RNmdu_JPEG%2FkAJwT7tAj677Y6JDZ98L-Tpe.jpg",
         "latitude": 36.2993083,
         "longitude": 127.3187632,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요. 대신 전화번호를 남길게요. 0507-1374-0913"
+        "StoreNumber": "0507-1374-0913"
       },
       {
         "name": "착한곱창",
@@ -120,7 +120,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzAyMjVfNiAg%2FMDAxNjc3MzA0ODAxODM3.C_IhFIvKKKf_lzffjNcHn0w6oHGOLB0YgbMvvWxq_uIg.Yw2buWyw4NmkbDFrWgNCr1k6tOpRbaADA01O_LX6WAIg.JPEG%2F95549C2B-FC71-4103-98FF-DC0A033B3DF8.jpeg",
         "latitude": 36.3469218,
         "longitude": 127.3397479,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요. 대신 전화번호를 남길게요. 042-825-1566"
+        "StoreNumber": "042-825-1566"
       },
       {
         "name": "청해바지락칼국수",
@@ -129,7 +129,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200318_165%2F1584506586005LEJF3_JPEG%2FMgUU3zeE0lCV0apwHcHd2l4c.jpg",
         "latitude": 36.3445651,
         "longitude": 127.3393801,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요. 대신 전화번호를 남길게요. 042-825-5688"
+        "StoreNumber": "042-825-5688"
       },
       {
         "name": "늘상상",
@@ -138,7 +138,7 @@
         "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMTNfMzkg%2FMDAxNjk3MjA3OTE3OTQ0.qpBmmikKQNGQKhvgz_R2jWyG8BA4Su1oXQSPgWJm0aIg.QX9Bg47IF7Ezk32Bk8yiFnItnMJJS9gxOtY7WdjYyokg.JPEG.sfs2612%2FKakaoTalk_20231013_225025767_06.jpg",
         "latitude": 36.344337,
         "longitude": 127.341549,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요. 대신 전화번호를 남길게요. 042-826-0128"
+        "StoreNumber": "042-826-0128"
       },
       {
         "name": "유성온천 족욕체험장",
@@ -147,7 +147,7 @@
         "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDFfMTkz%2FMDAxNjkzNTY2NDkzNjgz.BMdvEGbWAUROZFHfIn15XsCH9BjY4OnVcaioh1OmS8Yg.S3uHuQti9B1386cjBnD8auU5ShaHRndgrOOVudShpVQg.JPEG.neonadeuli72%2F%25C0%25AF%25BC%25BA%25BF%25C2%25C3%25B5%25B9%25AE%25C8%25AD%25B0%25F8%25BF%25F8_%252815%2529.JPG",
         "latitude": 36.3551488,
         "longitude": 127.3446279,
-        "reservation": "예약을 하는 곳이 아니에요"
+        "StoreNumber": "예약을 하는 곳이 아니에요"
       }
     ]
   },
@@ -160,7 +160,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230905_101%2F1693910392599DRxE7_JPEG%2FKakaoTalk_20230905_193740326_23.jpg",
         "latitude": 36.3227914,
         "longitude": 127.3436967,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-545-7295"
+        "StoreNumber": "042-545-7295"
       },
       {
         "name": "강반장로스구이",
@@ -169,7 +169,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230116_129%2F16738489934524KKcI_JPEG%2F4-1.jpg",
         "latitude": 36.3227914,
         "longitude": 127.3886392,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-485-0108"
+        "StoreNumber": "042-485-0108"
       },
       {
         "name": "도군함박",
@@ -178,7 +178,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20160822_224%2F147179336495185I40_JPEG%2F176772405943113_14.jpeg",
         "latitude": 36.3482147,
         "longitude": 127.3785038,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 0507-1401-4260"
+        "StoreNumber": "0507-1401-4260"
       },
       {
         "name": "한밭수목원",
@@ -187,7 +187,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20150831_163%2F1441007267046aSC1F_JPEG%2F11622659_1.jpg",
         "latitude": 36.3688239,
         "longitude": 127.3879822,
-        "reservation": "예약을 하는 곳이 아니에요"
+        "StoreNumber": "예약을 하는 곳이 아니에요"
       },
       {
         "name": "샤브작",
@@ -196,7 +196,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231031_61%2F1698714303695EOXuQ_JPEG%2FIMG_3539.jpg",
         "latitude": 36.3482147,
         "longitude": 127.3785038,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 0507-1316-3977"
+        "StoreNumber": "0507-1316-3977"
       },
       {
         "name": "둔산동 주먹구이",
@@ -205,7 +205,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzA4MjRfMjk0%2FMDAxNjkyODQxMDY0MjE2.fln-GR1aRszmQhxvjqbGZofkP_gz8pS8nbf337NlPBog.o3ZItxGBvJj65d39I9JtuquSshDkgS4wex2BF7Mnw1Ug.JPEG%2F209BEADF-F6D1-427E-8420-E2A6089C5455.jpeg",
         "latitude": 36.3523913,
         "longitude": 127.3738514,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-486-2872"
+        "StoreNumber": "042-486-2872"
       },
       {
         "name": "시장스시",
@@ -214,7 +214,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221107_164%2F1667775923918DQP8E_JPEG%2F20221107_080448.jpg",
         "latitude": 36.3668977,
         "longitude": 127.375022,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-484-6662"
+        "StoreNumber": "042-484-6662"
       },
       {
         "name": "모루",
@@ -223,7 +223,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210426_176%2F1619419212342NwbtV_JPEG%2FRa-GIQSexNOkBtA7e9DK22NM.jpeg.jpg",
         "latitude": 36.3494318,
         "longitude": 127.3782097,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-486-2201"
+        "StoreNumber": "042-486-2201"
       },
       {
         "name": "향마루",
@@ -232,7 +232,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190702_254%2F1562060494279rb5JY_JPEG%2F59-ryD5ViCIEHkAPiyBCPJgH.jpg",
         "latitude": 36.3481571,
         "longitude": 127.3821603,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-477-1557"
+        "StoreNumber": "042-477-1557"
       }
     ]
   },
@@ -245,7 +245,7 @@
         "image": "https://d12zq4w4guyljn.cloudfront.net/20230307073101083_photo_48c791ecc066.jpg",
         "latitude": 36.3592645,
         "longitude": 127.4265939,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-621-4325"
+        "StoreNumber": "042-621-4325"
       },
       {
         "name": "금강 로하스 산호빛 공원",
@@ -254,7 +254,7 @@
         "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzEwMjRfODYg%2FMDAxNjk4MTMyOTc1OTI3.KDbpUMm84eOcpnuzMLmhAMtTqt2G-PlnAYRg3zU03Gcg.fT91j8-3QF_Vw3jyR7JKWjhxnNDDJM792NnmqXdAeMEg.JPEG.majara78%2FDSC09992.jpg",
         "latitude": 36.4540779,
         "longitude": 127.4207952,
-        "reservation": "예약을 하는 곳이 아니에요"
+        "StoreNumber": "예약을 하는 곳이 아니에요"
       },
       {
         "name": "하늘정원",
@@ -263,7 +263,7 @@
         "image": "https://d12zq4w4guyljn.cloudfront.net/20200131094935_photo1_c6f2f647ed2c.jpg",
         "latitude": 36.3514193,
         "longitude": 127.4207874,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-638-8285"
+        "StoreNumber": " 042-638-8285"
       },
       {
         "name": "몽심",
@@ -272,7 +272,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221231_80%2F1672473933483qNzP5_JPEG%2F8E2BB573-42F5-492C-821A-8070A0F2A898.jpeg",
         "latitude": 36.3509555,
         "longitude": 127.4241946,
-        "reservation": "홀케이크 예약 : https://map.naver.com/p/search/%EB%AA%BD%EC%8B%AC/place/1195023040?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp"
+        "StoreNumber": "010-4459-1014"
       },
       {
         "name": "동춘당",
@@ -281,7 +281,7 @@
         "image": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA5MThfMTYg%2FMDAxNTA1NzQ1NzE3Nzkx.sbEF3bvHEZPNqJI1ErWI-TCe_sLkw-zfL2e-6DxTKqUg.mikRd9Zr9OipL_4US9dGnBHOaM153YYbRIIEI_5jBIMg.JPEG.jvj24601%2F%25B4%25EB%25C0%25FC.%25B5%25BF%25C3%25E1%25B4%25E7.02.%25B5%25BF%25C3%25E1%25B4%25E7%25B0%25ED%25C5%25C3.170916_%252816%2529.jpg%231066x600",
         "latitude": 36.3653759,
         "longitude": 127.4412873,
-        "reservation": "예약을 하는 곳이 아니에요"
+        "StoreNumber": "예약을 하는 곳이 아니에요"
       }
     ]
   },
@@ -294,7 +294,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200114_70%2F1579008854401Q0bIC_JPEG%2FZBSHIgTNAy4DZATvKa2iTEb1.jpg",
         "latitude": 36.3420012,
         "longitude": 127.4250555,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-627-9972"
+        "StoreNumber": "042-627-9972"
       },
       {
         "name": "대동하늘공원",
@@ -303,7 +303,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210618_176%2F1624003305179hxHf6_JPEG%2Fs6Q43GY067QT84UAf8VsMnkq.jpg",
         "latitude": 36.3317193,
         "longitude": 127.4515701,
-        "reservation": "예약을 하는 곳이 아니에요"
+        "StoreNumber": "예약을 하는 곳이 아니에요"
       },
       {
         "name": "식장산",
@@ -312,7 +312,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzA4MjFfMjAx%2FMDAxNjkyNjE3MDYyODY0.-RSMZ2FBwssgADCI6msAL7AvkoS_RjZv3Xa88CMHZHIg.NvxSl4OqGASXAupS4M_PKlRSDTLiK7tvbyUNwh4yqUwg.JPEG%2F4473772B-B8ED-4049-BD1D-BC98433D70A5.jpeg",
         "latitude": 36.2999441,
         "longitude": 127.4811228,
-        "reservation": "예약을 하는 곳이 아니에요"
+        "StoreNumber": "예약을 하는 곳이 아니에요"
       },
       {
         "name": "치앙마이 방콕",
@@ -321,7 +321,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191121_146%2F1574336979417yJKn6_JPEG%2FjTBgDO9_AC9QN9utwqbQUcF4.jpg",
         "latitude": 36.3340669,
         "longitude": 127.4378002,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 0507-1377-7894"
+        "StoreNumber": "0507-1377-7894"
       },
       {
         "name": "원미면옥",
@@ -330,7 +330,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230626_118%2F1687740912689SfTxs_JPEG%2FIMG_6785.jpeg",
         "latitude": 36.3319153,
         "longitude": 127.4753493,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 042-286-7883"
+        "StoreNumber": "042-286-7883"
       },
       {
         "name": "수리브라운",
@@ -339,7 +339,7 @@
         "image": "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20191120_250%2F15742526891798uYR7_JPEG%2Fv32c-GAkN4lQhwKv2HQHmn-A.jpg",
         "latitude": 36.3487432,
         "longitude": 127.437741,
-        "reservation": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 010-9887-0323"
+        "StoreNumber": "아쉽게도 예약이 되지 않는 곳이에요 대신 전화번호를 남길게요. 010-9887-0323"
       }
     ]
   }
