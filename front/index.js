@@ -1,5 +1,4 @@
 // main.js
-import * as MapModule from './modules/mapModule.js';
 import * as DataModule from './modules/dataModule.js';
 import * as GuModule from './modules/guModule.js';
 
@@ -26,6 +25,7 @@ const markerOptions = {
 };
 
 const marker = new naver.maps.Marker(markerOptions);
+
 const button = document.getElementsByClassName('button')[0];
 
 // "btn" 버튼 엘리먼트를 가져옵니다.
@@ -58,16 +58,20 @@ button.appendChild(daejeonButton);
 button.appendChild(gwangjuButton);
 
 const guDiv = document.createElement('div');
-maps.appendChild(guDiv);
+document.body.appendChild(guDiv);
 
-button.appendChild(daejeonButton);
-button.appendChild(gwangjuButton);
+// 대전 버튼 클릭 이벤트 핸들러 추가
+daejeonButton.addEventListener('click', daejeonButtonClickHandler);
+
+// 광주 버튼 클릭 이벤트 핸들러 추가
+gwangjuButton.addEventListener('click', gwangjuButtonClickHandler);
+
 async function daejeonButtonClickHandler() {
-  const data = await DataModule.fetchData('/list/daejeon.json');
-  GuModule.handleGuButtonClick(data, '대전', guDiv, createdGuButtons, map, marker);
+  const data = await DataModule.fetchData('./list/daejeon.json');
+  GuModule.handleGuButtonClick(data, '대전', guDiv, map, marker);
 }
 
 async function gwangjuButtonClickHandler() {
-  const data = await DataModule.fetchData('/list/gwangju.json');
-  GuModule.handleGuButtonClick(data, '광주', guDiv, createdGuButtons, map, marker);
+  const data = await DataModule.fetchData('./list/gwangju.json');
+  GuModule.handleGuButtonClick(data, '광주', guDiv, map, marker);
 }

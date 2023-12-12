@@ -1,4 +1,6 @@
 // guModule.js
+const createdGuButtons = new Set();
+
 export function handleGuButtonClick(data, area, guDiv, createdGuButtons, map, marker) {
     const guNames = Object.keys(data);
   
