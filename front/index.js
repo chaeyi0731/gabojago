@@ -75,3 +75,41 @@ async function gwangjuButtonClickHandler() {
   const data = await DataModule.fetchData('./list/gwangju.json');
   GuModule.handleGuButtonClick(data, '광주', guDiv, map, marker);
 }
+
+// 대전 버튼 클릭 시
+daejeonButton.addEventListener('click', async () => {
+  // JSON 데이터 가져오기
+  const data = await DataModule.fetchData('/list/daejeon.json');
+  handleGuButtonClick(data, '대전', guDiv, createdGuButtons, map, marker);
+});
+
+// 광주 버튼 클릭 시
+gwangjuButton.addEventListener('click', async () => {
+  // JSON 데이터 가져오기
+  const data = await DataModule.fetchData('/list/gwangju.json');
+  handleGuButtonClick(data, '광주', guDiv, createdGuButtons, map, marker);
+});
+
+// 구 버튼 클릭 시
+function addGuEventListener(guButton, dataKey, area, guDiv, createdGuButtons, map, marker) {
+  if (!createdGuButtons.has(guButton)) {
+    createdGuButtons.add(guButton);
+    guButton.addEventListener('click', async () => {
+      // JSON 데이터 가져오기
+      const data = await DataModule.fetchData(`/list/${dataKey}.json`);
+      handleGuButtonClick(data, area, guDiv, createdGuButtons, map, marker);
+    });
+  }
+}
+
+// 구 버튼과 이벤트 리스너 생성
+guNames.forEach((guName) => {
+  const guButton = createGuButton(guName);
+  addGuEventListener(guButton, `대전광역시/${guName}`, '대전', guDiv, createdGuButtons, map, marker);
+});
+
+// 광주의 각 구 버튼과 이벤트 리스너 생성
+gwangjuGuNames.forEach((guName) => {
+  const guButton = createGuButton(guName);
+  addGuEventListener(guButton, `광주광역시/${guName}`, '광주', guDiv, createdGuButtons, map, marker);
+});
