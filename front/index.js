@@ -113,3 +113,5 @@ gwangjuGuNames.forEach((guName) => {
   const guButton = createGuButton(guName);
   addGuEventListener(guButton, `광주광역시/${guName}`, '광주', guDiv, createdGuButtons, map, marker);
 });
+
+//test
