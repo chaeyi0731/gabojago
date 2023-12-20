@@ -1,7 +1,3 @@
-// main.js
-import * as DataModule from './modules/dataModule.js';
-import * as GuModule from './modules/guModule.js';
-
 const mapOptions = {
   center: new naver.maps.LatLng(36.3503409, 127.3848208),
   zoom: 20,
@@ -27,6 +23,8 @@ const markerOptions = {
 const marker = new naver.maps.Marker(markerOptions);
 
 const button = document.getElementsByClassName('button')[0];
+const maps = document.getElementsByClassName('mapandbutton')[0];
+const createdGuButtons = new Set();
 
 // "btn" 버튼 엘리먼트를 가져옵니다.
 const btn = document.getElementById('btn');
@@ -58,60 +56,220 @@ button.appendChild(daejeonButton);
 button.appendChild(gwangjuButton);
 
 const guDiv = document.createElement('div');
-document.body.appendChild(guDiv);
+maps.appendChild(guDiv);
 
-// 대전 버튼 클릭 이벤트 핸들러 추가
-daejeonButton.addEventListener('click', daejeonButtonClickHandler);
-
-// 광주 버튼 클릭 이벤트 핸들러 추가
-gwangjuButton.addEventListener('click', gwangjuButtonClickHandler);
-
-async function daejeonButtonClickHandler() {
-  const data = await DataModule.fetchData('./list/daejeon.json');
-  GuModule.handleGuButtonClick(data, '대전', guDiv, map, marker);
-}
-
-async function gwangjuButtonClickHandler() {
-  const data = await DataModule.fetchData('./list/gwangju.json');
-  GuModule.handleGuButtonClick(data, '광주', guDiv, map, marker);
-}
-
-// 대전 버튼 클릭 시
-daejeonButton.addEventListener('click', async () => {
+//* 대전 버튼 클릭 시 나옴
+daejeonButton.addEventListener('click', () => {
   // JSON 데이터 가져오기
-  const data = await DataModule.fetchData('/list/daejeon.json');
-  handleGuButtonClick(data, '대전', guDiv, createdGuButtons, map, marker);
+  fetch('/list/daejeon.json')
+    .then((response) => response.json())
+    .then((data) => {
+      // 구 를 나타 낼 div 생성
+      guDiv.style.display = 'flex';
+      guDiv.style.alignItems = 'center';
+      guDiv.style.flexDirection = 'column';
+
+      // 구 이름 배열
+      const guNames = ['중구', '서구', '동구', '대덕구', '유성구'];
+
+      // 구 버튼과 이벤트 리스너 생성
+      guNames.forEach((guName) => {
+        const guButton = createGuButton(guName);
+        addGuEventListener(guButton, `대전광역시/${guName}`);
+      });
+
+      // 이벤트 리스너 함수
+      function addGuEventListener(guButton, dataKey) {
+        if (!createdGuButtons.has(guButton)) {
+          createdGuButtons.add(guButton);
+          guButton.addEventListener('click', () => {
+            // 여기에서는 data를 참조하지 않도록 주의하세요.
+            const guData = data[dataKey];
+            guDiv.innerHTML = '';
+
+            const locationList = document.createElement('ul');
+            locationList.className = 'location-list';
+
+            guData.locations.forEach((location) => {
+              const listItem = document.createElement('li');
+
+              // 이미지 추가
+              const image = document.createElement('img');
+              image.src = location.image;
+              image.alt = location.name;
+              image.style.width = '15vw';
+              listItem.appendChild(image);
+
+              // 이름 추가
+              const name = document.createElement('p');
+              name.textContent = `이름: ${location.name}`;
+              listItem.appendChild(name);
+
+              // 주소 추가
+              const address = document.createElement('p');
+              address.textContent = `주소: ${location.address}`;
+              listItem.appendChild(address);
+
+              listItem.addEventListener('click', function () {
+                // 클릭한 장소의 위도와 경도를 가져옴
+                const latitude = location.latitude;
+                const longitude = location.longitude;
+
+                // 지도를 해당 위치로 이동
+                const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
+                map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+                marker.setPosition(daejeonLocation);
+              });
+
+              // 설명 추가
+              const description = document.createElement('p');
+              description.textContent = `설명: ${location.description}`;
+              listItem.appendChild(description);
+
+              locationList.appendChild(listItem);
+              listItem.style.width = '20vw';
+
+              //전화번호
+              const StoreNumber = document.createElement('p');
+              StoreNumber.textContent = `전화번호 : ${location.StoreNumber}`;
+              listItem.appendChild(StoreNumber);
+            });
+
+            guDiv.appendChild(locationList);
+            locationList.style.overflowY = 'auto';
+            locationList.style.maxHeight = '600px';
+            locationList.style.width = '25vw';
+          });
+        }
+      }
+    })
+    .catch((error) => console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error));
 });
 
-// 광주 버튼 클릭 시
-gwangjuButton.addEventListener('click', async () => {
-  // JSON 데이터 가져오기
-  const data = await DataModule.fetchData('/list/gwangju.json');
-  handleGuButtonClick(data, '광주', guDiv, createdGuButtons, map, marker);
-});
+// JSON 데이터 가져오기
+fetch('/list/gwangju.json')
+  .then((response) => response.json())
+  .then((data) => {
+    // 구 버튼 생성 함수
+    function createGuButton(guName) {
+      const guButton = document.createElement('button');
+      guDiv.appendChild(guButton);
+      guButton.classList.add(guName.toLowerCase()); // 클래스 이름을 구 이름으로 지정
+      guButton.textContent = guName;
+      guButton.style.color = 'white';
 
-// 구 버튼 클릭 시
-function addGuEventListener(guButton, dataKey, area, guDiv, createdGuButtons, map, marker) {
-  if (!createdGuButtons.has(guButton)) {
-    createdGuButtons.add(guButton);
-    guButton.addEventListener('click', async () => {
-      // JSON 데이터 가져오기
-      const data = await DataModule.fetchData(`/list/${dataKey}.json`);
-      handleGuButtonClick(data, area, guDiv, createdGuButtons, map, marker);
+      // 이 부분에서 addGuEventListener 함수를 호출하도록 변경
+      addGuEventListener(guButton, `광주광역시/${guName}`);
+
+      return guButton;
+    }
+
+    // addGuEventListener 함수를 이제 여기서 정의
+    function addGuEventListener(guButton, dataKey) {
+      guButton.addEventListener('click', () => {
+        // 여기에서는 data를 참조하지 않도록 주의하세요.
+        const guData = data[dataKey];
+        guDiv.innerHTML = '';
+
+        const locationList = document.createElement('ul');
+        locationList.className = 'location-list';
+
+        guData.locations.forEach((location) => {
+          const listItem = document.createElement('li');
+
+          // 이미지 추가
+          const image = document.createElement('img');
+          image.src = location.image;
+          image.alt = location.name;
+          image.style.width = '15vw';
+          listItem.appendChild(image);
+
+          // 이름 추가
+          const name = document.createElement('p');
+          name.textContent = `이름: ${location.name}`;
+          listItem.appendChild(name);
+
+          // 주소 추가
+          const address = document.createElement('p');
+          address.textContent = `주소: ${location.address}`;
+          listItem.appendChild(address);
+
+          listItem.addEventListener('click', function () {
+            // 클릭한 장소의 위도와 경도를 가져옴
+            const latitude = location.latitude;
+            const longitude = location.longitude;
+
+            // 지도를 해당 위치로 이동
+            const daejeonLocation = new naver.maps.LatLng(latitude, longitude);
+            map.setCenter(daejeonLocation); // 지도를 해당 위치로 이동
+            marker.setPosition(daejeonLocation);
+          });
+
+          // 설명 추가
+          const description = document.createElement('p');
+          description.textContent = `설명: ${location.description}`;
+          listItem.appendChild(description);
+
+          //전화번호
+
+          //전화번호
+          const StoreNumber = document.createElement('p');
+          StoreNumber.textContent = `전화번호 : ${location.StoreNumber}`;
+          listItem.appendChild(StoreNumber);
+
+          locationList.appendChild(listItem);
+          listItem.style.width = '20vw';
+        });
+
+        guDiv.appendChild(locationList);
+        locationList.style.overflowY = 'auto';
+        locationList.style.maxHeight = '600px';
+        locationList.style.width = '25vw';
+      });
+    }
+
+    // 광주 클릭시 정보 제공
+    // 광주 버튼 클릭 시 동작
+    gwangjuButton.addEventListener('click', () => {
+      guDiv.style.display = 'flex';
+      guDiv.style.alignItems = 'center';
+      guDiv.style.flexDirection = 'column';
+
+      // 광주의 각 구 이름 배열
+      const gwangjuGuNames = ['광산구', '남구', '동구', '서구', '북구'];
+
+      // 각 구 버튼 생성과 이벤트 리스너 추가
+      gwangjuGuNames.forEach((guName) => {
+        const guButton = createGuButton(guName);
+        // addGuEventListener 함수를 호출하지 않습니다. 이미 createGuButton 내에서 호출하도록 변경했습니다.
+      });
+    });
+  })
+  .catch((error) => console.error('JSON 데이터를 가져오는 중 오류가 발생했습니다:', error));
+
+// 구 버튼 생성 함수
+function createGuButton(guName) {
+  const guButton = document.createElement('button');
+  guDiv.appendChild(guButton);
+  guButton.classList.add(guName.toLowerCase()); // 클래스 이름을 구 이름으로 지정
+  guButton.textContent = guName;
+  guButton.style.color = 'white';
+  if (!guButton.hasEventListener) {
+    guButton.hasEventListener = true;
+    guButton.addEventListener('click', () => {
+      // 여기에서는 data를 참조하지 않도록 주의하세요.
+      const guData = data[`${currentArea}/${guName}`];
+      guDiv.innerHTML = '';
+
+      const locationList = document.createElement('ul');
+      locationList.className = 'location-list';
+
+      guDiv.appendChild(locationList);
+      locationList.style.overflowY = 'auto';
+      locationList.style.maxHeight = '600px';
+      locationList.style.width = '25vw';
     });
   }
+
+  return guButton;
 }
-
-// 구 버튼과 이벤트 리스너 생성
-guNames.forEach((guName) => {
-  const guButton = createGuButton(guName);
-  addGuEventListener(guButton, `대전광역시/${guName}`, '대전', guDiv, createdGuButtons, map, marker);
-});
-
-// 광주의 각 구 버튼과 이벤트 리스너 생성
-gwangjuGuNames.forEach((guName) => {
-  const guButton = createGuButton(guName);
-  addGuEventListener(guButton, `광주광역시/${guName}`, '광주', guDiv, createdGuButtons, map, marker);
-});
-
-//test
